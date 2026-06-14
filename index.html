@@ -90,7 +90,71 @@ h2{
 }
 
 </style>
+.circle-container{
+    position:relative;
+    width:500px;
+    height:500px;
+    margin:60px auto;
+}
 
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.item{
+    position:absolute;
+    font-weight:bold;
+}
+
+.top{
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.right-top{
+    top:90px;
+    right:0;
+}
+
+.right-bottom{
+    bottom:90px;
+    right:0;
+}
+
+.bottom{
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.left-bottom{
+    bottom:90px;
+    left:0;
+}
+
+.left-top{
+    top:90px;
+    left:0;
+}
+
+@media(max-width:768px){
+
+.circle-container{
+    width:320px;
+    height:320px;
+}
+
+.item{
+    font-size:0.9rem;
+}
+
+}
 </head>
 
 <body>
@@ -135,24 +199,18 @@ El SIIPP desenvolupa la capacitat de conservar regulació, ampliar la percepció
 
 <h2>La qualitat de decisió sota pressió</h2>
 
-<div class="cycle">
+<div class="circle-container">
 
-Regulació<br>
-↓<br>
+<div class="center">
+SIIPP
+</div>
 
-Percepció<br>
-↓<br>
-
-Lectura<br>
-↓<br>
-
-Decisió<br>
-↓<br>
-
-Acció<br>
-↓<br>
-
-Relectura
+<div class="item top">Regulació</div>
+<div class="item right-top">Percepció</div>
+<div class="item right-bottom">Lectura</div>
+<div class="item bottom">Decisió</div>
+<div class="item left-bottom">Acció</div>
+<div class="item left-top">Relectura</div>
 
 </div>
 
