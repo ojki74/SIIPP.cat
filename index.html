@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SIIPP | Contenció física i psicològica en situacions de crisi</title>
+<title>SIIPP</title>
 
 <style>
 
 body{
-    font-family: Arial, sans-serif;
     margin:0;
-    padding:0;
+    font-family:Arial, sans-serif;
     line-height:1.6;
     color:#222;
 }
 
 section{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     padding:80px 20px;
 }
@@ -34,34 +34,92 @@ h1{
 
 h2{
     font-size:2rem;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 .subtitle{
-    font-size:1.3rem;
     max-width:800px;
     margin:auto;
+    font-size:1.2rem;
 }
 
 .button{
     display:inline-block;
     margin-top:30px;
     padding:15px 30px;
-    background:#222;
+    background:black;
     color:white;
     text-decoration:none;
     border-radius:4px;
 }
 
-.cycle{
-    text-align:center;
-    font-size:1.5rem;
-    line-height:2;
-    margin-top:40px;
+.circle-container{
+    position:relative;
+    width:500px;
+    height:500px;
+    margin:80px auto;
+}
+
+.circle{
+    position:absolute;
+    width:400px;
+    height:400px;
+    border:2px solid #ccc;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:1.6rem;
+    font-weight:bold;
+}
+
+.item{
+    position:absolute;
+    font-weight:bold;
+}
+
+.top{
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.right-top{
+    top:120px;
+    right:20px;
+}
+
+.right-bottom{
+    bottom:120px;
+    right:20px;
+}
+
+.bottom{
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.left-bottom{
+    bottom:120px;
+    left:20px;
+}
+
+.left-top{
+    top:120px;
+    left:20px;
 }
 
 ul{
-    font-size:1.1rem;
+    max-width:700px;
+    margin:auto;
 }
 
 .footer{
@@ -76,85 +134,55 @@ h1{
 }
 
 h2{
-    font-size:1.6rem;
-}
-
-.subtitle{
-    font-size:1.1rem;
-}
-
-.cycle{
-    font-size:1.2rem;
-}
-
-}
-
-</style>
-.circle-container{
-    position:relative;
-    width:500px;
-    height:500px;
-    margin:60px auto;
-}
-
-.center{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
     font-size:1.5rem;
-    font-weight:bold;
 }
-
-.item{
-    position:absolute;
-    font-weight:bold;
-}
-
-.top{
-    top:0;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.right-top{
-    top:90px;
-    right:0;
-}
-
-.right-bottom{
-    bottom:90px;
-    right:0;
-}
-
-.bottom{
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.left-bottom{
-    bottom:90px;
-    left:0;
-}
-
-.left-top{
-    top:90px;
-    left:0;
-}
-
-@media(max-width:768px){
 
 .circle-container{
     width:320px;
     height:320px;
 }
 
+.circle{
+    width:250px;
+    height:250px;
+}
+
 .item{
-    font-size:0.9rem;
+    font-size:0.85rem;
+}
+
+.top{
+    top:0;
+}
+
+.right-top{
+    top:70px;
+    right:0;
+}
+
+.right-bottom{
+    bottom:70px;
+    right:0;
+}
+
+.bottom{
+    bottom:0;
+}
+
+.left-bottom{
+    bottom:70px;
+    left:0;
+}
+
+.left-top{
+    top:70px;
+    left:0;
 }
 
 }
+
+</style>
+
 </head>
 
 <body>
@@ -171,7 +199,7 @@ Més enllà de la tècnica: qualitat de decisió sota pressió.
 Formació, consultoria i implantació per a professionals i organitzacions que intervenen en contextos d'alta incertesa.
 </p>
 
-<a class="button" href="#contacte">
+<a href="#contacte" class="button">
 Sol·licitar informació
 </a>
 
@@ -197,19 +225,26 @@ El SIIPP desenvolupa la capacitat de conservar regulació, ampliar la percepció
 
 <section>
 
-<h2>La qualitat de decisió sota pressió</h2>
+<h2 style="text-align:center;">
+La qualitat de decisió sota pressió
+</h2>
 
 <div class="circle-container">
 
-<div class="center">
-SIIPP
-</div>
+<div class="circle"></div>
+
+<div class="center">SIIPP</div>
 
 <div class="item top">Regulació</div>
+
 <div class="item right-top">Percepció</div>
+
 <div class="item right-bottom">Lectura</div>
+
 <div class="item bottom">Decisió</div>
+
 <div class="item left-bottom">Acció</div>
+
 <div class="item left-top">Relectura</div>
 
 </div>
@@ -221,7 +256,7 @@ SIIPP
 <h2>Què és el SIIPP?</h2>
 
 <p>
-El Sistema Integral d'Intervenció Psicofísica (SIIPP) desenvolupa professionals, equips i organitzacions amb major capacitat per intervenir de forma proporcional, segura i ajustada quan augmenta la complexitat de la situació.
+El Sistema Integral d'Intervenció Psicofísica desenvolupa professionals, equips i organitzacions amb major capacitat per intervenir de forma proporcional, segura i ajustada quan augmenta la complexitat de la situació.
 </p>
 
 <p>
@@ -239,7 +274,7 @@ Integra contenció física, contenció psicològica, regulació, percepció, lec
 <li>Educació especial</li>
 <li>Salut mental</li>
 <li>Atenció social</li>
-<li>Entorns d'alta incertesa</li>
+<li>Altres entorns d'alta incertesa</li>
 </ul>
 
 </section>
@@ -248,17 +283,11 @@ Integra contenció física, contenció psicològica, regulació, percepció, lec
 
 <h2>Contacte</h2>
 
-<p>
-Óscar Fernández
-</p>
+<p>Óscar Fernández</p>
 
-<p>
-Sistema Integral d'Intervenció Psicofísica i PREDIAC
-</p>
+<p>SIIPP · Sistema Integral d'Intervenció Psicofísica i PREDIAC</p>
 
-<p>
-[afegeix aquí el teu email]
-</p>
+<p>[afegeix aquí el teu email]</p>
 
 </section>
 
