@@ -53,68 +53,14 @@ h2{
     border-radius:4px;
 }
 
-.circle-container{
-    position:relative;
-    width:500px;
-    height:500px;
-    margin:80px auto;
+.diagram{
+    text-align:center;
 }
 
-.circle{
-    position:absolute;
-    width:400px;
-    height:400px;
-    border:2px solid #ccc;
-    border-radius:50%;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-}
-
-.center{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    font-size:1.6rem;
-    font-weight:bold;
-}
-
-.item{
-    position:absolute;
-    font-weight:bold;
-}
-
-.top{
-    top:20px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.right-top{
-    top:120px;
-    right:20px;
-}
-
-.right-bottom{
-    bottom:120px;
-    right:20px;
-}
-
-.bottom{
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.left-bottom{
-    bottom:120px;
-    left:20px;
-}
-
-.left-top{
-    top:120px;
-    left:20px;
+.diagram img{
+    width:100%;
+    max-width:900px;
+    height:auto;
 }
 
 ul{
@@ -137,46 +83,8 @@ h2{
     font-size:1.5rem;
 }
 
-.circle-container{
-    width:320px;
-    height:320px;
-}
-
-.circle{
-    width:250px;
-    height:250px;
-}
-
-.item{
-    font-size:0.85rem;
-}
-
-.top{
-    top:0;
-}
-
-.right-top{
-    top:70px;
-    right:0;
-}
-
-.right-bottom{
-    bottom:70px;
-    right:0;
-}
-
-.bottom{
-    bottom:0;
-}
-
-.left-bottom{
-    bottom:70px;
-    left:0;
-}
-
-.left-top{
-    top:70px;
-    left:0;
+.subtitle{
+    font-size:1rem;
 }
 
 }
@@ -223,31 +131,11 @@ El SIIPP desenvolupa la capacitat de conservar regulació, ampliar la percepció
 
 </section>
 
-<section>
+<section class="diagram">
 
-<h2 style="text-align:center;">
-La qualitat de decisió sota pressió
-</h2>
+<h2>La qualitat de decisió sota pressió</h2>
 
-<div class="circle-container">
-
-<div class="circle"></div>
-
-<div class="center">SIIPP</div>
-
-<div class="item top">Regulació</div>
-
-<div class="item right-top">Percepció</div>
-
-<div class="item right-bottom">Lectura</div>
-
-<div class="item bottom">Decisió</div>
-
-<div class="item left-bottom">Acció</div>
-
-<div class="item left-top">Relectura</div>
-
-</div>
+<img src="retro_imagen.png" alt="Cicle SIIPP">
 
 </section>
 
