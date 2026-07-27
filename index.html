@@ -75,7 +75,7 @@
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="reveal">
                 <h1 class="text-4xl md:text-5xl leading-tight font-normal text-stone-900 tracking-tight">
-                    La qualitat de la intervenció depèn de la qualitat de la presa de decisions.
+                    Quan augmenta la pressió, disminueix la qualitat de la decisió. El SIIPP actua abans que això passi.
                 </h1>
                 <p class="mt-8 text-lg text-stone-600 leading-relaxed max-w-lg">
                     El SIIPP és un entrenament de modulació del sistema simpàtic que permet mantenir recursos cognitius disponibles durant la presa de decisions sota pressió.
@@ -87,37 +87,48 @@
                 </div>
             </div>
             
-            <!-- Diagrama Hero (bucle compacte) -->
+            <!-- Diagrama Hero: circuit tancat -->
             <div class="reveal flex justify-center md:justify-end">
-                <svg viewBox="0 0 340 440" class="w-full max-w-xs h-auto" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="5" width="320" height="430" rx="4" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+                <svg viewBox="0 0 500 420" class="w-full max-w-md h-auto" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Fletxes exteriors -->
+                    <path d="M 250 76 Q 330 76 380 130" fill="none" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <polygon points="380,130 375,125 385,125" fill="#a8a29e"/>
                     
-                    <rect x="70" y="25" width="200" height="40" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
-                    <text x="170" y="51" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Regulació</text>
+                    <path d="M 410 166 Q 430 220 420 280" fill="none" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <polygon points="420,280 415,275 425,275" fill="#a8a29e"/>
                     
-                    <line x1="170" y1="65" x2="170" y2="81" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <path d="M 80 280 Q 60 220 90 166" fill="none" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <polygon points="90,166 85,171 95,171" fill="#a8a29e"/>
                     
-                    <rect x="70" y="81" width="200" height="40" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
-                    <text x="170" y="107" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Estat</text>
+                    <path d="M 90 130 Q 140 76 200 76" fill="none" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <polygon points="200,76 195,81 205,81" fill="#a8a29e"/>
                     
-                    <line x1="170" y1="121" x2="170" y2="137" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <!-- Connexions amb el centre -->
+                    <line x1="320" y1="280" x2="330" y2="230" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <polygon points="330,230 325,235 335,235" fill="#a8a29e"/>
                     
-                    <rect x="70" y="137" width="200" height="40" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
-                    <text x="170" y="163" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Percepció</text>
+                    <line x1="170" y1="210" x2="180" y2="280" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <polygon points="180,280 175,275 185,275" fill="#a8a29e"/>
                     
-                    <line x1="170" y1="177" x2="170" y2="193" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <!-- Nodes exteriors -->
+                    <rect x="200" y="40" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="250" y="63" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#1c1917">Regulació</text>
                     
-                    <rect x="55" y="193" width="230" height="40" rx="2" fill="#1e293b" stroke="#1e293b" stroke-width="1"/>
-                    <text x="170" y="219" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#fff" font-weight="500">Presa de decisions</text>
+                    <rect x="360" y="130" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="410" y="153" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#1c1917">Estat</text>
                     
-                    <line x1="170" y1="233" x2="170" y2="249" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <rect x="320" y="280" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="370" y="303" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#1c1917">Percepció</text>
                     
-                    <rect x="70" y="249" width="200" height="40" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
-                    <text x="170" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Intervenció</text>
+                    <rect x="80" y="280" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="130" y="303" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#1c1917">Intervenció</text>
                     
-                    <!-- Fletxa circular que torna a Regulació -->
-                    <path d="M 170 289 L 170 305 L 280 305 L 280 45 L 250 45" fill="none" stroke="#a8a29e" stroke-width="1.5" stroke-dasharray="4 3"/>
-                    <polygon points="250,45 245,40 245,50" fill="#a8a29e"/>
+                    <rect x="40" y="130" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="90" y="153" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#1c1917">Relectura</text>
+                    
+                    <!-- Node central -->
+                    <rect x="170" y="191" width="160" height="38" rx="2" fill="#1e293b" stroke="#1e293b" stroke-width="1"/>
+                    <text x="250" y="216" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#fff" font-weight="500">Presa de decisions</text>
                 </svg>
             </div>
         </div>
@@ -125,7 +136,18 @@
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- Problema (recorregut invers, protagonista: decisió) -->
+    <!-- Posicionament -->
+    <section class="py-24 md:py-32 px-6 bg-stone-100">
+        <div class="max-w-4xl mx-auto reveal text-center">
+            <p class="text-2xl md:text-4xl text-stone-900 leading-snug tracking-tight">
+                La majoria de formacions entrenen què fer. El SIIPP entrena des de quin estat es decideix què fer.
+            </p>
+        </div>
+    </section>
+
+    <div class="line-separator max-w-6xl mx-auto"></div>
+
+    <!-- Problema (cadena causal, sense negacions) -->
     <section id="problema" class="py-24 md:py-32 px-6">
         <div class="max-w-3xl mx-auto reveal">
             <div class="space-y-10 text-2xl md:text-3xl text-stone-900 leading-snug tracking-tight">
@@ -145,13 +167,39 @@
     <div class="line-separator max-w-6xl mx-auto"></div>
 
     <!-- Nucli del model -->
-    <section id="model" class="py-24 md:py-32 px-6 bg-stone-100">
+    <section id="model" class="py-24 md:py-32 px-6">
         <div class="max-w-4xl mx-auto reveal text-center">
             <div class="space-y-8 text-2xl md:text-4xl text-stone-900 leading-snug tracking-tight">
                 <p>La regulació determina l'estat.</p>
                 <p>L'estat determina la percepció.</p>
                 <p>La percepció determina la qualitat de la presa de decisions.</p>
                 <p>La decisió determina la qualitat de la intervenció.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="line-separator max-w-6xl mx-auto"></div>
+
+    <!-- Fisiologia -->
+    <section id="fisiologia" class="py-24 md:py-32 px-6 bg-stone-100">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight mb-16">
+                El SIIPP es basa en.
+            </h2>
+            
+            <div class="space-y-10">
+                <div class="border-t border-stone-300 pt-8">
+                    <p class="text-xl text-stone-900 font-medium">Regulació autonòmica</p>
+                </div>
+                <div class="border-t border-stone-300 pt-8">
+                    <p class="text-xl text-stone-900 font-medium">Modulació simpàtica</p>
+                </div>
+                <div class="border-t border-stone-300 pt-8">
+                    <p class="text-xl text-stone-900 font-medium">Recuperació de recursos cognitius</p>
+                </div>
+                <div class="border-t border-stone-300 pt-8">
+                    <p class="text-xl text-stone-900 font-medium">Presa de decisions sota pressió</p>
+                </div>
             </div>
         </div>
     </section>
@@ -192,7 +240,7 @@
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- Com s'entrena (NOVA) -->
+    <!-- Com s'entrena -->
     <section id="entrenament" class="py-24 md:py-32 px-6 bg-stone-100">
         <div class="max-w-3xl mx-auto reveal text-center">
             <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight mb-16">
@@ -200,52 +248,88 @@
             </h2>
             
             <div class="flex flex-col items-center gap-4 text-lg md:text-xl text-stone-900 font-medium">
-                <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Entrenament experiencial</div>
-                <span class="text-stone-400">↓</span>
-                <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Pressió controlada</div>
+                <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Pressió</div>
                 <span class="text-stone-400">↓</span>
                 <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Regulació</div>
                 <span class="text-stone-400">↓</span>
+                <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Recuperació de recursos</div>
+                <span class="text-stone-400">↓</span>
+                <div class="bg-slate-800 text-white px-10 py-3 w-72 text-center">Presa de decisions</div>
+                <span class="text-stone-400">↓</span>
+                <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Acció</div>
+                <span class="text-stone-400">↓</span>
                 <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Relectura</div>
                 <span class="text-stone-400">↓</span>
-                <div class="bg-slate-800 text-white px-10 py-3 w-72 text-center">Transferència al context real</div>
+                <div class="border border-stone-300 bg-white px-10 py-3 w-72 text-center">Nova decisió</div>
             </div>
         </div>
     </section>
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- Arquitectura del sistema (bucle gran) -->
+    <!-- Arquitectura (diagrama gran, mateix circuit) -->
     <section id="arquitectura" class="py-24 md:py-32 px-6">
-        <div class="max-w-4xl mx-auto reveal">
+        <div class="max-w-5xl mx-auto reveal">
             <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight text-center mb-16">
                 Arquitectura del sistema.
             </h2>
             
-            <div class="flex flex-col items-center gap-3 text-lg md:text-xl text-stone-900 font-medium">
-                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Regulació</div>
-                <span class="text-stone-400">↓</span>
-                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Estat</div>
-                <span class="text-stone-400">↓</span>
-                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Percepció</div>
-                <span class="text-stone-400">↓</span>
-                <div class="bg-slate-800 text-white px-10 py-3 w-72 text-center">Presa de decisions</div>
-                <span class="text-stone-400">↓</span>
-                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Intervenció</div>
-                <span class="text-stone-400">↺</span>
-            </div>
-            
-            <!-- Fletxa circular visual que torna a dalt -->
-            <div class="mt-8 flex justify-center">
-                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 100 10 L 100 30 L 180 30 L 180 50" fill="none" stroke="#a8a29e" stroke-width="1.5" stroke-dasharray="4 3"/>
-                    <polygon points="180,50 175,45 185,45" fill="#a8a29e"/>
-                    <text x="100" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#78716c">La relectura actualitza l'estat</text>
+            <div class="flex justify-center">
+                <svg viewBox="0 0 500 420" class="w-full max-w-lg h-auto" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 250 76 Q 330 76 380 130" fill="none" stroke="#d6d3d1" stroke-width="2"/>
+                    <polygon points="380,130 375,125 385,125" fill="#78716c"/>
+                    
+                    <path d="M 410 166 Q 430 220 420 280" fill="none" stroke="#d6d3d1" stroke-width="2"/>
+                    <polygon points="420,280 415,275 425,275" fill="#78716c"/>
+                    
+                    <path d="M 80 280 Q 60 220 90 166" fill="none" stroke="#d6d3d1" stroke-width="2"/>
+                    <polygon points="90,166 85,171 95,171" fill="#78716c"/>
+                    
+                    <path d="M 90 130 Q 140 76 200 76" fill="none" stroke="#d6d3d1" stroke-width="2"/>
+                    <polygon points="200,76 195,81 205,81" fill="#78716c"/>
+                    
+                    <line x1="320" y1="280" x2="330" y2="230" stroke="#d6d3d1" stroke-width="2"/>
+                    <polygon points="330,230 325,235 335,235" fill="#78716c"/>
+                    
+                    <line x1="170" y1="210" x2="180" y2="280" stroke="#d6d3d1" stroke-width="2"/>
+                    <polygon points="180,280 175,275 185,275" fill="#78716c"/>
+                    
+                    <rect x="200" y="40" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="250" y="63" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917" font-weight="500">Regulació</text>
+                    
+                    <rect x="360" y="130" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="410" y="153" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917" font-weight="500">Estat</text>
+                    
+                    <rect x="320" y="280" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="370" y="303" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917" font-weight="500">Percepció</text>
+                    
+                    <rect x="80" y="280" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="130" y="303" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917" font-weight="500">Intervenció</text>
+                    
+                    <rect x="40" y="130" width="100" height="36" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="90" y="153" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917" font-weight="500">Relectura</text>
+                    
+                    <rect x="170" y="191" width="160" height="38" rx="2" fill="#1e293b" stroke="#1e293b" stroke-width="1"/>
+                    <text x="250" y="216" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#fff" font-weight="500">Presa de decisions</text>
                 </svg>
             </div>
             
-            <p class="mt-8 text-center text-lg text-stone-600 max-w-2xl mx-auto">
+            <p class="mt-16 text-center text-lg text-stone-600 max-w-2xl mx-auto">
                 La relectura actualitza l'estat del sistema i inicia un nou cicle de decisió.
+            </p>
+        </div>
+    </section>
+
+    <div class="line-separator max-w-6xl mx-auto"></div>
+
+    <!-- Ventana de Agència -->
+    <section id="ventana" class="py-24 md:py-32 px-6 bg-stone-100">
+        <div class="max-w-3xl mx-auto reveal text-center">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight mb-8">
+                Ventana de Agència.
+            </h2>
+            <p class="text-lg text-stone-600 leading-relaxed">
+                El SIIPP opera dins d'un marc de Ventana de Agència: l'espai on el professional pot decidir amb qualitat es redueix quan l'activació simpàtica es desborda. El sistema entrena l'ampliació d'aquest espai per preservar capacitat de decisió sota demanda.
             </p>
         </div>
     </section>
@@ -265,32 +349,25 @@
                     <p class="mt-4 text-stone-600 leading-relaxed text-lg">
                         Desenvolupament de la capacitat individual d'intervenció sota pressió.
                     </p>
-                    <ul class="mt-6 space-y-2 text-stone-600">
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Contenció física
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Contenció psicològica
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Intervenció en crisi
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Defensa personal aplicada
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Regulació sota pressió
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Qualitat de la presa de decisions
-                        </li>
-                    </ul>
+                    
+                    <div class="mt-8">
+                        <p class="text-sm text-stone-500 uppercase tracking-wide mb-3">Capacitats</p>
+                        <ul class="space-y-2 text-stone-600">
+                            <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Regulació sota pressió</li>
+                            <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Presa de decisions</li>
+                            <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Intervenció en crisi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <p class="text-sm text-stone-500 uppercase tracking-wide mb-3">Aplicacions</p>
+                        <ul class="space-y-2 text-stone-600">
+                            <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Contenció física</li>
+                            <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Contenció psicològica</li>
+                            <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Defensa personal aplicada</li>
+                        </ul>
+                    </div>
+                    
                     <div class="mt-8">
                         <a href="#" class="inline-block text-sm text-stone-900 border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors">
                             Veure formacions
@@ -304,26 +381,11 @@
                         Implantació del sistema SIIPP en equips i institucions.
                     </p>
                     <ul class="mt-6 space-y-2 text-stone-600">
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Formació
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Consultoria
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Implantació
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Desenvolupament de protocols
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Formació de referents interns
-                        </li>
+                        <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Formació</li>
+                        <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Consultoria</li>
+                        <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Implantació</li>
+                        <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Desenvolupament de protocols</li>
+                        <li class="flex items-start"><span class="mr-3 text-stone-400">—</span>Formació de referents interns</li>
                     </ul>
                     <div class="mt-8">
                         <a href="#" class="inline-block text-sm text-stone-900 border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors">
@@ -358,27 +420,42 @@
     <div class="line-separator max-w-6xl mx-auto"></div>
 
     <!-- Experiència -->
-    <section id="experiencia" class="py-24 md:py-32 px-6">
+    <section id="experiencia" class="py-24 md:py-32 px-6 bg-stone-100">
         <div class="max-w-3xl mx-auto reveal">
             <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
                 Experiència en contextos d'alta complexitat.
             </h2>
             <p class="mt-8 text-lg text-stone-600 leading-relaxed">
-                El SIIPP s'ha desenvolupat a partir de més de vint anys d'experiència en intervenció, formació i desenvolupament de sistemes d'actuació en situacions d'alta exigència.
+                El SIIPP s'ha desenvolupat a partir de més de vint anys d'experiència en:
             </p>
+            <ul class="mt-8 space-y-4 text-lg text-stone-600">
+                <li class="flex items-start">
+                    <span class="mr-3 text-stone-400">—</span>
+                    Desenvolupament del MCR
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-stone-400">—</span>
+                    Implantació en centres
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-stone-400">—</span>
+                    Formació d'equips
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-3 text-stone-400">—</span>
+                    Intervenció en situacions reals
+                </li>
+            </ul>
         </div>
     </section>
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
     <!-- Cierre -->
-    <section class="py-24 md:py-32 px-6 bg-stone-100">
+    <section class="py-24 md:py-32 px-6">
         <div class="max-w-4xl mx-auto reveal text-center">
             <p class="text-3xl md:text-5xl text-stone-900 leading-tight tracking-tight">
-                La intervenció no comença amb l'acció.
-            </p>
-            <p class="mt-4 text-3xl md:text-5xl text-stone-900 leading-tight tracking-tight">
-                Comença amb l'estat des del qual es pren la decisió.
+                Entrenem la capacitat de decidir sota pressió.
             </p>
         </div>
     </section>
