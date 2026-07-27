@@ -1,373 +1,353 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SIIPP PREDIAC — Formació en contenció respectuosa, regulació emocional, defensa personal funcional i decisió sota pressió. Més de 40 entitats a Catalunya.">
-<title>SIIPP PREDIAC — Contenció, Regulació, Decisió Sota Pressió</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Sora:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<base target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIIPP — Sistema Integral d'Intervenció Psicofísica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                        },
+                        slate: {
+                            700: '#334155',
+                            800: '#1e293b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            background-color: #fafaf9; 
+            color: #1c1917;
+            -webkit-font-smoothing: antialiased;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .line-separator {
+            height: 1px;
+            background-color: #e7e5e4;
+            width: 100%;
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans antialiased">
 
-<!-- HERO -->
-<header class="hero">
-  <div class="wrap">
-    <p class="hero-label">SIIPP PREDIAC</p>
-    <h1>Contenció respectuosa, regulació emocional i defensa personal funcional</h1>
-    <p class="hero-lead">Formació per a educadors, auxiliars, celadors, psicòlegs i qualsevol persona que vulgui desenvolupar capacitat de decisió sota pressió.</p>
-    <div class="hero-cta-group">
-      <a href="#particulars" class="btn btn-primary">Formació per a particulars</a>
-      <a href="#entitats" class="btn btn-ghost">Formació per a entitats</a>
-    </div>
-    <div class="hero-meta">
-      <span>Regulació neurofisiològica</span>
-      <span>Corregulació</span>
-      <span>Enfoc bottom-up</span>
-      <span>40+ entitats</span>
-    </div>
-  </div>
-</header>
+    <!-- Navegació -->
+    <nav class="fixed top-0 left-0 right-0 bg-stone-50/90 backdrop-blur-sm z-50 border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-lg tracking-tight font-medium text-stone-900">SIIPP</a>
+            <div class="hidden md:flex items-center gap-10 text-sm text-stone-600">
+                <a href="#sistema" class="hover:text-stone-900 transition-colors">Sistema</a>
+                <a href="#aplicacio" class="hover:text-stone-900 transition-colors">Aplicació</a>
+                <a href="#contacte" class="hover:text-stone-900 transition-colors">Contacte</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- EL SISTEMA -->
-<section class="section-light">
-  <div class="wrap narrow">
-    <h2>La regulació del propi sistema nerviós amplia la percepció</h2>
-    <p>Quan augmenta la pressió, les opcions percebudes tendeixen a reduir-se. El SIIPP desenvolupa la capacitat de conservar regulació, ampliar la percepció i sostenir la qualitat de decisió.</p>
-    <p>La intervenció s'inicia en la persona que pretén regular la situació. A través de la corregulació, el professional regula el seu propi sistema nerviós per poder llegir, decidir i actuar amb criteri.</p>
-    <div class="flow">
-      <div class="flow-item"><div class="flow-num">1</div><div class="flow-name">Regulació neurofisiològica</div></div>
-      <div class="flow-item"><div class="flow-num">2</div><div class="flow-name">Amplitud perceptiva</div></div>
-      <div class="flow-item"><div class="flow-num">3</div><div class="flow-name">Lectura de la situació</div></div>
-      <div class="flow-item"><div class="flow-num">4</div><div class="flow-name">Qualitat de decisió</div></div>
-      <div class="flow-item"><div class="flow-num">5</div><div class="flow-name">Intervenció ajustada</div></div>
-      <div class="flow-item"><div class="flow-num">6</div><div class="flow-name">Corregulació</div></div>
-    </div>
-    <p class="highlight">El cos constitueix la porta d'entrada operativa des de la qual s'organitza tot el sistema.</p>
-  </div>
-</section>
+    <!-- Hero -->
+    <header class="pt-32 pb-24 md:pt-40 md:pb-32 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h1 class="text-4xl md:text-5xl leading-tight font-normal text-stone-900 tracking-tight">
+                    La qualitat de la intervenció sota pressió no és un talent. És un sistema.
+                </h1>
+                <p class="mt-8 text-lg text-stone-600 leading-relaxed max-w-lg">
+                    SIIPP és un model d'intervenció psicofísica integral dissenyat per desenvolupar la capacitat de decisió i regulació en situacions d'alta exigència.
+                </p>
+                <div class="mt-10">
+                    <a href="#contacte" class="inline-block bg-slate-800 text-white text-sm px-8 py-3.5 hover:bg-slate-700 transition-colors">
+                        Contactar
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Diagrama SIIPP -->
+            <div class="reveal flex justify-center md:justify-end">
+                <svg viewBox="0 0 420 520" class="w-full max-w-sm h-auto" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Marc exterior sutil -->
+                    <rect x="20" y="10" width="380" height="500" rx="6" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+                    
+                    <!-- Capa 1: Contexte -->
+                    <rect x="70" y="40" width="280" height="70" rx="3" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="210" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1c1917" font-weight="500">CONTEXTE DE PRESSIÓ</text>
+                    
+                    <!-- Connector -->
+                    <line x1="210" y1="110" x2="210" y2="145" stroke="#d6d3d1" stroke-width="2"/>
+                    
+                    <!-- Capa 2: Núcleo SIIPP -->
+                    <rect x="55" y="155" width="310" height="120" rx="3" fill="#334155" stroke="#334155" stroke-width="1"/>
+                    <text x="210" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#fff" font-weight="600" letter-spacing="0.05em">SIIPP</text>
+                    <text x="210" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">Regulació psicofísica integral</text>
+                    <text x="210" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">i estructura de decisió</text>
+                    
+                    <!-- Dimensions laterals -->
+                    <line x1="55" y1="215" x2="25" y2="215" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <text x="20" y="210" text-anchor="end" font-family="system-ui, sans-serif" font-size="11" fill="#78716c">Físic</text>
+                    <line x1="365" y1="215" x2="395" y2="215" stroke="#d6d3d1" stroke-width="1.5"/>
+                    <text x="400" y="210" text-anchor="start" font-family="system-ui, sans-serif" font-size="11" fill="#78716c">Estructural</text>
+                    
+                    <!-- Connector -->
+                    <line x1="210" y1="275" x2="210" y2="310" stroke="#d6d3d1" stroke-width="2"/>
+                    
+                    <!-- Capa 3: Decisió -->
+                    <rect x="70" y="320" width="280" height="70" rx="3" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="210" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1c1917" font-weight="500">DECISIÓ ESTRUCTURADA</text>
+                    
+                    <!-- Connector -->
+                    <line x1="210" y1="390" x2="210" y2="425" stroke="#d6d3d1" stroke-width="2"/>
+                    
+                    <!-- Capa 4: Intervenció -->
+                    <rect x="70" y="435" width="280" height="60" rx="3" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
+                    <text x="210" y="470" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1c1917" font-weight="500">INTERVENCIÓ</text>
+                </svg>
+            </div>
+        </div>
+    </header>
 
-<!-- PER QUÈ SIIPP -->
-<section class="section-warm">
-  <div class="wrap">
-    <h2 style="text-align:center;">Per què SIIPP PREDIAC</h2>
-    <div class="siglas">
-      <div class="sigla">
-        <div class="sigla-letter">S</div>
-        <div class="sigla-name">Sistema</div>
-        <div class="sigla-desc">Organitza criteris, llenguatge, decisió i intervenció en un marc coherent.</div>
-      </div>
-      <div class="sigla">
-        <div class="sigla-letter">I</div>
-        <div class="sigla-name">Integral</div>
-        <div class="sigla-desc">Actua simultàniament sobre el professional, l'equip i l'organització.</div>
-      </div>
-      <div class="sigla">
-        <div class="sigla-letter">I</div>
-        <div class="sigla-name">Intervenció</div>
-        <div class="sigla-desc">Orientat a la pràctica real i a la presa de decisions en situacions concretes.</div>
-      </div>
-      <div class="sigla">
-        <div class="sigla-letter">P</div>
-        <div class="sigla-name">Psicofísica</div>
-        <div class="sigla-desc">La regulació corporal, la percepció, la decisió i l'acció formen part d'un mateix procés.</div>
-      </div>
-      <div class="sigla sigla-featured">
-        <div class="sigla-letter">P</div>
-        <div class="sigla-name">PREDIAC</div>
-        <div class="sigla-desc">Base estructural del SIIPP. Desenvolupat a partir del treball de José Ortiz Perea i evolucionat per Óscar Fernández. Integra regulació psicofísica, finestra d'agència, lectura de la situació, conservació d'opcions i qualitat de decisió sota pressió.</div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="line-separator max-w-6xl mx-auto"></div>
 
-<!-- DOS LÍNIES -->
-<section class="section-dark" id="particulars">
-  <div class="wrap">
-    <h2 style="text-align:center; color:#fff;">Dos maneres de formar-se</h2>
-    <div class="two-lines">
-      <div class="line-card">
-        <p class="line-label">Per a professionals i particulars</p>
-        <h3>Decisió sota pressió</h3>
-        <p>Formació oberta per a educadors, auxiliars, celadors, psicòlegs i qualsevol persona que vulgui desenvolupar capacitat de regulació i decisió en situacions d'alta pressió.</p>
-        <ul class="line-list">
-          <li>Regulació neurofisiològica aplicada</li>
-          <li>Contenció respectuosa</li>
-          <li>Defensa personal funcional</li>
-          <li>Gestió de crisis i corregulació</li>
-        </ul>
-        <a href="#contacte" class="btn btn-primary">Sol·licitar informació</a>
-      </div>
-      <div class="line-card" id="entitats">
-        <p class="line-label">Per a entitats i centres</p>
-        <h3>Implantació del sistema</h3>
-        <p>Formació a mida per a equips, des de cursos puntuals fins a la implantació completa del sistema amb referents interns.</p>
-        <ul class="line-list">
-          <li>Cursos a mida (mínim 3 hores)</li>
-          <li>Formació de referents interns</li>
-          <li>Implantació progressiva del sistema</li>
-          <li>Consultoria i acompanyament</li>
-        </ul>
-        <a href="#contacte" class="btn btn-primary">Sol·licitar informació</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- 1. Problema -->
+    <section id="problema" class="py-24 md:py-32 px-6">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
+                Quan augmenta la pressió, disminueix la qualitat de decisió.
+            </h2>
+            <p class="mt-8 text-lg text-stone-600 leading-relaxed">
+                Sota pressió, el cos i la ment tendeixen a simplificar excessivament, perdent capacitat d'anàlisi i flexibilitat. Això no és una fallada individual: és una resposta previsible del sistema psicofísic davant l'alta demanda.
+            </p>
+        </div>
+    </section>
 
-<!-- CAPACITATS -->
-<section class="section-warm">
-  <div class="wrap">
-    <h2 style="text-align:center;">Capacitats que desenvolupa</h2>
-    <div class="siglas">
-      <div class="sigla">
-        <div class="sigla-name">Capacitat operativa</div>
-        <div class="sigla-desc">Major amplitud perceptiva. Major qualitat de lectura de la situació. Conservació d'opcions sota pressió. Intervencions més proporcionals.</div>
-      </div>
-      <div class="sigla">
-        <div class="sigla-name">Capacitat professional</div>
-        <div class="sigla-desc">Major regulació sota pressió. Major seguretat operativa. Major confiança funcional. Major sostenibilitat professional.</div>
-      </div>
-      <div class="sigla">
-        <div class="sigla-name">Capacitat d'equip</div>
-        <div class="sigla-desc">Major coherència entre professionals. Millor coordinació operativa. Transferència de coneixement entre torns. Desenvolupament de referents interns.</div>
-      </div>
-      <div class="sigla">
-        <div class="sigla-name">Capacitat organitzativa</div>
-        <div class="sigla-desc">Llenguatge compartit. Criteris comuns de decisió. Continuïtat operativa. Major autonomia organitzativa.</div>
-      </div>
-    </div>
-    <p class="closing-quote">Totes aquestes capacitats convergeixen en un mateix objectiu: sostenir la qualitat de decisió quan augmenta la pressió.</p>
-  </div>
-</section>
+    <div class="line-separator max-w-6xl mx-auto"></div>
 
-<!-- RECORREGUT -->
-<section class="section-dark">
-  <div class="wrap narrow">
-    <p class="section-label">Recorregut</p>
-    <h2 style="color:#fff;">Gairebé dues dècades de desenvolupament pràctic</h2>
-    <p>El treball iniciat per José Ortiz Perea en l'àmbit de la diversitat funcional ha evolucionat a través de formació, consultoria, acompanyament i intervenció en contextos reals.</p>
-    <p>El sistema s'ha desenvolupat, contrastat i refinat amb més de quaranta entitats de Catalunya.</p>
-    <div class="stat">
-      <div class="stat-num">40+</div>
-      <div class="stat-label">Entitats de Catalunya</div>
-    </div>
-  </div>
-</section>
+    <!-- 2. Connexió -->
+    <section id="connexio" class="py-24 md:py-32 px-6">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
+                La qualitat de la intervenció depèn de la qualitat de les decisions.
+            </h2>
+            <p class="mt-8 text-lg text-stone-600 leading-relaxed">
+                Cada acció d'intervenció és el resultat d'una cadena de decisions. Si la pressió compromet aquesta cadena, es produeix un descens inevitable en l'eficàcia de la resposta, independentment de la bona intenció o l'experiència prèvia.
+            </p>
+        </div>
+    </section>
 
-<!-- PORTES D'ENTRADA -->
-<section class="section-light">
-  <div class="wrap">
-    <h2 style="text-align:center;">Portes d'entrada</h2>
-    <div class="tags">
-      <span class="tag">Contenció respectuosa</span>
-      <span class="tag">Gestió de crisis</span>
-      <span class="tag">Regulació emocional</span>
-      <span class="tag">Defensa personal funcional</span>
-      <span class="tag">Autodefensa</span>
-      <span class="tag">Decisió sota pressió</span>
-      <span class="tag">Corregulació</span>
-      <span class="tag">Neurociència aplicada</span>
-    </div>
-  </div>
-</section>
+    <div class="line-separator max-w-6xl mx-auto"></div>
 
-<!-- COM FUNCIONA -->
-<section class="section-dark">
-  <div class="wrap narrow" style="text-align:center;">
-    <p class="section-label">Com funciona</p>
-    <p style="margin-bottom:32px;">La regulació del professional és la variable entrenable. Tot el sistema deriva d'aquí.</p>
-    <div class="steps">
-      <span class="step">Regulació</span>
-      <span class="step-arrow">→</span>
-      <span class="step">Percepció</span>
-      <span class="step-arrow">→</span>
-      <span class="step">Lectura</span>
-      <span class="step-arrow">→</span>
-      <span class="step">Decisió</span>
-      <span class="step-arrow">→</span>
-      <span class="step">Intervenció</span>
-      <span class="step-arrow">→</span>
-      <span class="step">Organització</span>
-    </div>
-    <p style="font-size:15px; color:#a3a3a3; margin-top:32px;">Proporcionalitat, necessitat i últim recurs són conseqüències naturals d'una intervenció ben llegida.</p>
-  </div>
-</section>
+    <!-- 3. Solució -->
+    <section id="sistema" class="py-24 md:py-32 px-6">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
+                El SIIPP desenvolupa aquesta capacitat.
+            </h2>
+            <p class="mt-8 text-lg text-stone-600 leading-relaxed">
+                El Sistema Integral d'Intervenció Psicofísica és un marc operatiu que treballa simultàniament la regulació fisiològica, l'estructura cognitiva de decisió i la integració en acció. No afegeix informació: estructura la que ja existeix.
+            </p>
+            
+            <div class="mt-16 space-y-12">
+                <div class="border-t border-stone-200 pt-8">
+                    <h3 class="text-xl text-stone-900 font-medium">Regulació psicofísica</h3>
+                    <p class="mt-3 text-stone-600 leading-relaxed">
+                        Gestió de l'activació fisiològica i l'estat emocional sota demanda. No es tracta de relaxació, sinó d'adequar el nivell d'activació a la situació.
+                    </p>
+                </div>
+                <div class="border-t border-stone-200 pt-8">
+                    <h3 class="text-xl text-stone-900 font-medium">Estructura de decisió</h3>
+                    <p class="mt-3 text-stone-600 leading-relaxed">
+                        Marc operatiu que redueix la càrrega cognitiva i orienta l'atenció cap als senyals rellevants, prioritzant la precisió per sobre de la velocitat reactiva.
+                    </p>
+                </div>
+                <div class="border-t border-stone-200 pt-8">
+                    <h3 class="text-xl text-stone-900 font-medium">Protocol d'intervenció</h3>
+                    <p class="mt-3 text-stone-600 leading-relaxed">
+                        Integració de la resposta física i psicològica en una acció coherent, mesurable i ajustable segons el context.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- PROFESSIONAL CUIDAT -->
-<section class="section-accent">
-  <div class="wrap narrow" style="text-align:center;">
-    <p class="quote-text">Un professional cuidat cuida millor.</p>
-    <div class="quote-line"></div>
-    <p class="quote-body">Una intervenció organitzada protegeix simultàniament la seguretat, la dignitat i la capacitat d'acció de la persona atesa i del professional que intervé.</p>
-  </div>
-</section>
+    <div class="line-separator max-w-6xl mx-auto"></div>
 
-<!-- RESULTATS -->
-<section class="section-light">
-  <div class="wrap">
-    <h2 style="text-align:center;">Resultats d'una implantació</h2>
-    <div class="results">
-      <div class="result">Major qualitat de decisió sota pressió</div>
-      <div class="result">Major coherència entre professionals</div>
-      <div class="result">Major coordinació operativa</div>
-      <div class="result">Major seguretat professional</div>
-      <div class="result">Major transferència de coneixement</div>
-      <div class="result">Desenvolupament de referents interns</div>
-      <div class="result">Major continuïtat operativa</div>
-      <div class="result">Major sostenibilitat organitzativa</div>
-      <div class="result">Major qualitat d'intervenció</div>
-      <div class="result">Major autonomia organitzativa</div>
-      <div class="result">Major sostenibilitat operativa</div>
-    </div>
-  </div>
-</section>
+    <!-- 4. Aplicació -->
+    <section id="aplicacio" class="py-24 md:py-32 px-6">
+        <div class="max-w-6xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight max-w-3xl">
+                Un mateix sistema. Dos nivells d'aplicació.
+            </h2>
+            
+            <div class="mt-16 grid md:grid-cols-2 gap-16 md:gap-24">
+                <div>
+                    <h3 class="text-xl text-stone-900 font-medium border-b border-stone-200 pb-4">Professionals</h3>
+                    <p class="mt-6 text-stone-600 leading-relaxed">
+                        Per a persones que intervenen directament sota pressió.
+                    </p>
+                    <ul class="mt-6 space-y-3 text-stone-600">
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Contenció física i psicològica
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Intervenció en situacions de crisi
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Regulació sota estrès
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Defensa personal aplicada
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Desenvolupament de la qualitat de decisió
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl text-stone-900 font-medium border-b border-stone-200 pb-4">Organitzacions</h3>
+                    <p class="mt-6 text-stone-600 leading-relaxed">
+                        Per integrar el sistema dins dels equips.
+                    </p>
+                    <ul class="mt-6 space-y-3 text-stone-600">
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Formació
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Consultoria
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Implantació
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Desenvolupament de protocols
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Formació de referents interns
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-stone-400">—</span>
+                            Transferència del sistema a la pràctica quotidiana
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- IMPLANTACIÓ -->
-<section class="section-warm">
-  <div class="wrap">
-    <h2 style="text-align:center;">Implantació, no únicament formació</h2>
-    <p style="text-align:center; color:#737373; margin-bottom:40px;">Una formació transfereix coneixement. Una implantació el deixa dins l'organització.</p>
-    <div class="pillars">
-      <div class="pillar">
-        <h3>Llenguatge compartit</h3>
-        <p>Facilita la coordinació entre professionals, la incorporació de nous treballadors, la continuïtat entre torns i la transmissió d'informació rellevant.</p>
-      </div>
-      <div class="pillar">
-        <h3>Criteris compartits</h3>
-        <p>Marcs comuns per decidir i intervenir sota pressió. La coherència operativa deixa de dependre de respostes individuals.</p>
-      </div>
-      <div class="pillar">
-        <h3>Cultura d'intervenció</h3>
-        <p>La implantació progressiva genera una forma compartida de llegir, decidir i actuar que s'integra en la pràctica quotidiana de l'equip.</p>
-      </div>
-    </div>
-    <div class="org-capacity">
-      <p class="org-label">El SIIPP construeix capacitat organitzativa</p>
-      <div class="org-grid">
-        <div>Llenguatge compartit</div>
-        <div>Criteris compartits</div>
-        <div>Referents interns</div>
-        <div>Transferència de coneixement</div>
-        <div>Coherència entre torns</div>
-        <div>Continuïtat operativa</div>
-        <div>Major autonomia organitzativa</div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="line-separator max-w-6xl mx-auto"></div>
 
-<!-- CONTENCIÓ -->
-<section class="section-light">
-  <div class="wrap narrow">
-    <p class="section-label">Contenció respectuosa</p>
-    <h2>Abraçada limitant</h2>
-    <p>La contenció respectuosa és una eina protectora integrada dins del sistema. Quan una limitació física és necessària, el SIIPP la concep com una abraçada limitant orientada a protegir simultàniament la persona atesa, el professional i l'organització.</p>
-  </div>
-</section>
+    <!-- 5. Contextos -->
+    <section id="contextos" class="py-24 md:py-32 px-6">
+        <div class="max-w-6xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
+                On s'aplica.
+            </h2>
+            
+            <div class="mt-16 grid md:grid-cols-3 gap-x-12 gap-y-6 text-lg text-stone-600">
+                <div class="border-b border-stone-200 pb-4">Seguretat i emergències</div>
+                <div class="border-b border-stone-200 pb-4">Sanitat i salut mental</div>
+                <div class="border-b border-stone-200 pb-4">Educació</div>
+                <div class="border-b border-stone-200 pb-4">Àmbit corporatiu</div>
+                <div class="border-b border-stone-200 pb-4">Esport d'alta competició</div>
+                <div class="border-b border-stone-200 pb-4">Intervenció social</div>
+            </div>
+        </div>
+    </section>
 
-<!-- ÀMBITS -->
-<section class="section-warm">
-  <div class="wrap">
-    <h2 style="text-align:center;">Àmbits d'aplicació</h2>
-    <div class="ambits">
-      <div class="ambit-block">
-        <p class="ambit-label">Amb experiència directa</p>
-        <p class="ambit-title">Diversitat funcional · Educació especial · Salut mental · Atenció social</p>
-      </div>
-      <div class="ambit-block">
-        <p class="ambit-label">Principis transferibles</p>
-        <p class="ambit-title">Seguretat privada · Vigilància · Celadors · Emergències · Cossos policials</p>
-      </div>
-    </div>
-    <p class="ambit-closing">El nucli del sistema s'activa quan la pressió, la incertesa i la necessitat de decidir condicionen la qualitat de l'acció.</p>
-  </div>
-</section>
+    <div class="line-separator max-w-6xl mx-auto"></div>
 
-<!-- COM TREBALLEM -->
-<section class="section-light">
-  <div class="wrap">
-    <h2 style="text-align:center;">Com treballem</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="card-num">01</div>
-        <h3>Formació</h3>
-        <p>Desenvolupament de competències individuals i d'equip. Format intensiu o mòduls progressius adaptats a la realitat de l'entitat.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">02</div>
-        <h3>Formació de referents interns</h3>
-        <p>Capacitació de professionals de la pròpia entitat per sostenir i transferir el sistema internament.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">03</div>
-        <h3>Consultoria</h3>
-        <p>Anàlisi de processos, incidents i necessitats organitzatives. Identificació dels punts on la pressió compromet la qualitat de la decisió.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">04</div>
-        <h3>Assessoria i implantació</h3>
-        <p>Suport tècnic continuat per integrar el sistema en la cultura d'intervenció de l'organització.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- 6. Contacte -->
+    <section id="contacte" class="py-24 md:py-32 px-6">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
+                Contacte.
+            </h2>
+            <p class="mt-6 text-lg text-stone-600">
+                Si vols explorar com integrar el SIIPP al teu context professional o organitzatiu, escriu-nos.
+            </p>
+            
+            <form class="mt-16 space-y-10" onsubmit="event.preventDefault();">
+                <div>
+                    <label class="block text-sm text-stone-500 mb-2">Nom</label>
+                    <input type="text" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors" placeholder="">
+                </div>
+                <div>
+                    <label class="block text-sm text-stone-500 mb-2">Correu electrònic</label>
+                    <input type="email" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors" placeholder="">
+                </div>
+                <div>
+                    <label class="block text-sm text-stone-500 mb-2">Missatge</label>
+                    <textarea rows="4" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors resize-none" placeholder=""></textarea>
+                </div>
+                <div class="pt-4">
+                    <button type="submit" class="bg-slate-800 text-white text-sm px-10 py-3.5 hover:bg-slate-700 transition-colors">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
 
-<!-- DADES TÈCNIQUES -->
-<section class="section-dark">
-  <div class="wrap">
-    <div class="tech">
-      <div>
-        <p class="tech-label">Durada</p>
-        <p class="tech-value">Adaptable. Jornada intensiva o mòduls progressius.</p>
-      </div>
-      <div>
-        <p class="tech-label">Destinataris</p>
-        <p class="tech-value">Professionals i equips que intervenen en contextos d'alta incertesa.</p>
-      </div>
-      <div>
-        <p class="tech-label">Format</p>
-        <p class="tech-value">Presencial. Treball corporal, perceptiu i situacional.</p>
-      </div>
-      <div>
-        <p class="tech-label">Llengua</p>
-        <p class="tech-value">Català / Castellà</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-stone-500">
+            <span>SIIPP — Sistema Integral d'Intervenció Psicofísica</span>
+            <span>2026</span>
+        </div>
+    </footer>
 
-<!-- ENTITATS -->
-<section class="section-light">
-  <div class="wrap">
-    <h2 style="text-align:center;">Entitats amb les quals s'ha treballat</h2>
-    <div class="orgs">
-      <div class="org">Fundació Atendis</div>
-      <div class="org">Fundació Sant Tomàs</div>
-      <div class="org">Xarxa Santa Tecla</div>
-    </div>
-    <p style="text-align:center; color:#737373; font-size:15px;">El desenvolupament del sistema s'ha construït a través de gairebé dues dècades de treball en més de quaranta entitats de Catalunya.</p>
-  </div>
-</section>
+    <script>
+        // Animació d'entrada suau
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
 
-<!-- BANNER -->
-<section class="section-accent">
-  <div class="wrap" style="text-align:center;">
-    <p class="banner-text">A(T) > 0 — Regulació del intervinient</p>
-  </div>
-</section>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
 
-<!-- FOOTER -->
-<footer class="section-dark" id="contacte">
-  <div class="wrap narrow" style="text-align:center;">
-    <h2 style="color:#fff;">Sol·licitar informació</h2>
-    <p style="color:#a3a3a3; margin-bottom:32px;">Contacta per conèixer com el SIIPP pot desenvolupar capacitat professional, d'equip i organitzativa.</p>
-    <a href="mailto:ojki74@gmail.com" class="btn btn-primary" style="margin-bottom:32px;">Enviar sol·licitud</a>
-    <p style="color:#737373; font-size:14px;">Óscar Fernández Sanz — Fundador i Director<br><a href="mailto:ojki74@gmail.com" style="color:#d4d4d4; border-bottom:1px solid #525252;">ojki74@gmail.com</a></p>
-  </div>
-</footer>
-
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
