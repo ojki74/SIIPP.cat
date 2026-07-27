@@ -23,7 +23,6 @@
                             900: '#1c1917',
                         },
                         slate: {
-                            700: '#334155',
                             800: '#1e293b',
                         }
                     },
@@ -43,8 +42,8 @@
         }
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transform: translateY(24px);
+            transition: opacity 0.9s ease-out, transform 0.9s ease-out;
         }
         .reveal.visible {
             opacity: 1;
@@ -64,7 +63,7 @@
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="text-lg tracking-tight font-medium text-stone-900">SIIPP</a>
             <div class="hidden md:flex items-center gap-10 text-sm text-stone-600">
-                <a href="#sistema" class="hover:text-stone-900 transition-colors">Sistema</a>
+                <a href="#model" class="hover:text-stone-900 transition-colors">Model</a>
                 <a href="#aplicacio" class="hover:text-stone-900 transition-colors">Aplicació</a>
                 <a href="#contacte" class="hover:text-stone-900 transition-colors">Contacte</a>
             </div>
@@ -82,50 +81,49 @@
                     El SIIPP és un entrenament de modulació del sistema simpàtic que permet mantenir recursos cognitius disponibles durant la presa de decisions sota pressió.
                 </p>
                 <div class="mt-10">
-                    <a href="#contacte" class="inline-block bg-slate-800 text-white text-sm px-8 py-3.5 hover:bg-slate-700 transition-colors">
+                    <a href="#contacte" class="inline-block bg-slate-800 text-white text-sm px-8 py-3.5 hover:bg-stone-800 transition-colors">
                         Sol·licita informació
                     </a>
                 </div>
             </div>
             
-            <!-- Diagrama SIIPP -->
+            <!-- Diagrama Hero (compacte) -->
             <div class="reveal flex justify-center md:justify-end">
-                <svg viewBox="0 0 420 520" class="w-full max-w-sm h-auto" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Marc exterior sutil -->
-                    <rect x="20" y="10" width="380" height="500" rx="6" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+                <svg viewBox="0 0 320 420" class="w-full max-w-xs h-auto" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="5" width="300" height="410" rx="4" fill="none" stroke="#e7e5e4" stroke-width="1"/>
                     
-                    <!-- Capa 1: Contexte -->
-                    <rect x="70" y="40" width="280" height="70" rx="3" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
-                    <text x="210" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1c1917" font-weight="500">CONTEXTE DE PRESSIÓ</text>
+                    <rect x="60" y="25" width="200" height="44" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="160" y="53" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Context de pressió</text>
                     
-                    <!-- Connector -->
-                    <line x1="210" y1="110" x2="210" y2="145" stroke="#d6d3d1" stroke-width="2"/>
+                    <line x1="160" y1="69" x2="160" y2="85" stroke="#d6d3d1" stroke-width="1.5"/>
                     
-                    <!-- Capa 2: Núcleo SIIPP -->
-                    <rect x="55" y="155" width="310" height="120" rx="3" fill="#334155" stroke="#334155" stroke-width="1"/>
-                    <text x="210" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" fill="#fff" font-weight="600" letter-spacing="0.05em">SIIPP</text>
-                    <text x="210" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">Modulació del sistema simpàtic</text>
-                    <text x="210" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">i conservació de recursos cognitius</text>
+                    <rect x="60" y="85" width="200" height="44" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="160" y="113" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Regulació</text>
                     
-                    <!-- Dimensions laterals -->
-                    <line x1="55" y1="215" x2="25" y2="215" stroke="#d6d3d1" stroke-width="1.5"/>
-                    <text x="20" y="210" text-anchor="end" font-family="system-ui, sans-serif" font-size="11" fill="#78716c">Fisiològic</text>
-                    <line x1="365" y1="215" x2="395" y2="215" stroke="#d6d3d1" stroke-width="1.5"/>
-                    <text x="400" y="210" text-anchor="start" font-family="system-ui, sans-serif" font-size="11" fill="#78716c">Estructural</text>
+                    <line x1="160" y1="129" x2="160" y2="145" stroke="#d6d3d1" stroke-width="1.5"/>
                     
-                    <!-- Connector -->
-                    <line x1="210" y1="275" x2="210" y2="310" stroke="#d6d3d1" stroke-width="2"/>
+                    <rect x="60" y="145" width="200" height="44" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="160" y="173" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Estat</text>
                     
-                    <!-- Capa 3: Decisió -->
-                    <rect x="70" y="320" width="280" height="70" rx="3" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
-                    <text x="210" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1c1917" font-weight="500">PRESA DE DECISIONS</text>
+                    <line x1="160" y1="189" x2="160" y2="205" stroke="#d6d3d1" stroke-width="1.5"/>
                     
-                    <!-- Connector -->
-                    <line x1="210" y1="390" x2="210" y2="425" stroke="#d6d3d1" stroke-width="2"/>
+                    <rect x="60" y="205" width="200" height="44" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="160" y="233" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Percepció</text>
                     
-                    <!-- Capa 4: Intervenció -->
-                    <rect x="70" y="435" width="280" height="60" rx="3" fill="#f5f5f4" stroke="#57534e" stroke-width="1.5"/>
-                    <text x="210" y="470" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#1c1917" font-weight="500">INTERVENCIÓ</text>
+                    <line x1="160" y1="249" x2="160" y2="265" stroke="#d6d3d1" stroke-width="1.5"/>
+                    
+                    <rect x="45" y="265" width="230" height="44" rx="2" fill="#1e293b" stroke="#1e293b" stroke-width="1"/>
+                    <text x="160" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#fff" font-weight="500">Presa de decisions</text>
+                    
+                    <line x1="160" y1="309" x2="160" y2="325" stroke="#d6d3d1" stroke-width="1.5"/>
+                    
+                    <rect x="60" y="325" width="200" height="44" rx="2" fill="#f5f5f4" stroke="#57534e" stroke-width="1"/>
+                    <text x="160" y="353" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#1c1917">Intervenció</text>
+                    
+                    <!-- Fletxa circular relectura -->
+                    <path d="M 160 369 L 160 385 L 240 385 L 240 200 L 220 200" fill="none" stroke="#a8a29e" stroke-width="1.5" stroke-dasharray="4 3"/>
+                    <polygon points="220,200 215,195 215,205" fill="#a8a29e"/>
+                    <text x="250" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#78716c">Relectura</text>
                 </svg>
             </div>
         </div>
@@ -133,206 +131,132 @@
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- 1. Problema -->
+    <!-- Problema (recorregut invers) -->
     <section id="problema" class="py-24 md:py-32 px-6">
         <div class="max-w-3xl mx-auto reveal">
-            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
-                Quan augmenta la pressió, augmenta l'activació del sistema simpàtic.
-            </h2>
-            <p class="mt-8 text-lg text-stone-600 leading-relaxed">
-                Aquesta activació modifica l'estat del sistema i afecta la disponibilitat dels recursos cognitius necessaris per intervenir.
-            </p>
-            <p class="mt-6 text-lg text-stone-600 leading-relaxed">
-                En situacions d'alta pressió, el sistema simpàtic augmenta l'activació necessària per respondre a la demanda. El problema apareix quan aquesta activació comprometeix la disponibilitat dels recursos cognitius necessaris per mantenir una lectura ajustada i una presa de decisions proporcional.
-            </p>
-            
-            <div class="mt-16 bg-stone-100 p-8 md:p-12">
-                <div class="flex flex-wrap items-center gap-3 text-sm md:text-base text-stone-700 font-medium">
-                    <span>Activació simpàtica</span>
-                    <span class="text-stone-400">→</span>
-                    <span>Estat del sistema</span>
-                    <span class="text-stone-400">→</span>
-                    <span>Recursos cognitius disponibles</span>
-                    <span class="text-stone-400">→</span>
-                    <span>Presa de decisions</span>
-                    <span class="text-stone-400">→</span>
-                    <span>Qualitat de la intervenció</span>
-                </div>
+            <div class="space-y-10 text-2xl md:text-3xl text-stone-900 leading-snug tracking-tight">
+                <p>La qualitat de la intervenció depèn de la presa de decisions.</p>
+                <p class="text-stone-500">↓</p>
+                <p>La presa de decisions depèn de la percepció.</p>
+                <p class="text-stone-500">↓</p>
+                <p>La percepció depèn de l'estat.</p>
+                <p class="text-stone-500">↓</p>
+                <p>L'estat depèn de la regulació.</p>
+                <p class="text-stone-500">↓</p>
+                <p class="text-slate-800 font-medium">El SIIPP entrena la regulació.</p>
             </div>
         </div>
     </section>
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- 2. Mecanisme SIIPP -->
-    <section id="mecanisme" class="py-24 md:py-32 px-6">
-        <div class="max-w-3xl mx-auto reveal">
-            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
-                Com funciona el SIIPP.
-            </h2>
-            
-            <div class="mt-16 space-y-12">
-                <div class="border-t border-stone-200 pt-8">
-                    <h3 class="text-xl text-stone-900 font-medium">Modulació del sistema simpàtic</h3>
-                    <p class="mt-3 text-stone-600 leading-relaxed">
-                        No es tracta de relaxació. És la capacitat de modular l'activació fisiològica per mantenir capacitat funcional sota demanda.
-                    </p>
-                </div>
-                <div class="border-t border-stone-200 pt-8">
-                    <h3 class="text-xl text-stone-900 font-medium">Conservació de recursos cognitius</h3>
-                    <p class="mt-3 text-stone-600 leading-relaxed">
-                        La regulació de l'estat permet mantenir disponibles recursos necessaris per a la percepció, la lectura i la presa de decisions.
-                    </p>
-                </div>
-                <div class="border-t border-stone-200 pt-8">
-                    <h3 class="text-xl text-stone-900 font-medium">Qualitat de la intervenció</h3>
-                    <p class="mt-3 text-stone-600 leading-relaxed">
-                        La intervenció final depèn de l'estat des del qual s'ha construït la decisió.
-                    </p>
-                </div>
+    <!-- Nucli del model -->
+    <section id="model" class="py-24 md:py-32 px-6 bg-stone-100">
+        <div class="max-w-4xl mx-auto reveal text-center">
+            <div class="space-y-8 text-2xl md:text-4xl text-stone-900 leading-snug tracking-tight">
+                <p>La regulació determina l'estat.</p>
+                <p>L'estat determina la percepció.</p>
+                <p>La percepció determina la qualitat de la presa de decisions.</p>
+                <p>La decisió determina la qualitat de la intervenció.</p>
             </div>
         </div>
     </section>
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- 3. Arquitectura del sistema -->
-    <section id="sistema" class="py-24 md:py-32 px-6 bg-stone-100">
+    <!-- Què desenvolupa -->
+    <section id="desenvolupa" class="py-24 md:py-32 px-6">
         <div class="max-w-5xl mx-auto reveal">
             <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight text-center">
+                Què desenvolupa el SIIPP.
+            </h2>
+            
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
+                <div class="text-center">
+                    <div class="w-3 h-3 rounded-full bg-stone-400 mx-auto mb-4"></div>
+                    <p class="text-stone-900 font-medium">Regulació</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-3 h-3 rounded-full bg-stone-400 mx-auto mb-4"></div>
+                    <p class="text-stone-900 font-medium">Percepció</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-3 h-3 rounded-full bg-stone-400 mx-auto mb-4"></div>
+                    <p class="text-stone-900 font-medium">Presa de decisions</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-3 h-3 rounded-full bg-stone-400 mx-auto mb-4"></div>
+                    <p class="text-stone-900 font-medium">Intervenció</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-3 h-3 rounded-full bg-stone-400 mx-auto mb-4"></div>
+                    <p class="text-stone-900 font-medium">Relectura</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="line-separator max-w-6xl mx-auto"></div>
+
+    <!-- Arquitectura (diagrama gran) -->
+    <section id="arquitectura" class="py-24 md:py-32 px-6">
+        <div class="max-w-4xl mx-auto reveal">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight text-center mb-16">
                 Arquitectura del sistema.
             </h2>
-            <p class="mt-6 text-lg text-stone-600 leading-relaxed text-center max-w-2xl mx-auto">
-                El SIIPP opera com una seqüència integrada. Cada element és una fase del mateix sistema, no un mòdul independent.
-            </p>
             
-            <div class="mt-16 flex flex-col items-center gap-4">
-                <div class="w-full max-w-md bg-white border border-stone-300 px-8 py-5 text-center text-stone-900 font-medium">
-                    Estat
-                </div>
-                <div class="text-stone-400 text-xl">↓</div>
-                <div class="w-full max-w-md bg-white border border-stone-300 px-8 py-5 text-center text-stone-900 font-medium">
-                    Regulació
-                </div>
-                <div class="text-stone-400 text-xl">↓</div>
-                <div class="w-full max-w-md bg-white border border-stone-300 px-8 py-5 text-center text-stone-900 font-medium">
-                    Percepció
-                </div>
-                <div class="text-stone-400 text-xl">↓</div>
-                <div class="w-full max-w-md bg-white border border-stone-300 px-8 py-5 text-center text-stone-900 font-medium">
-                    Lectura
-                </div>
-                <div class="text-stone-400 text-xl">↓</div>
-                <div class="w-full max-w-md bg-slate-800 text-white px-8 py-5 text-center font-medium">
-                    Presa de decisions
-                </div>
-                <div class="text-stone-400 text-xl">↓</div>
-                <div class="w-full max-w-md bg-white border border-stone-300 px-8 py-5 text-center text-stone-900 font-medium">
-                    Acció
-                </div>
-                <div class="text-stone-400 text-xl">↓</div>
-                <div class="w-full max-w-md bg-white border border-stone-300 px-8 py-5 text-center text-stone-900 font-medium">
-                    Relectura
-                </div>
+            <div class="flex flex-col items-center gap-3 text-lg md:text-xl text-stone-900 font-medium">
+                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Regulació</div>
+                <span class="text-stone-400">↓</span>
+                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Estat</div>
+                <span class="text-stone-400">↓</span>
+                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Percepció</div>
+                <span class="text-stone-400">↓</span>
+                <div class="bg-slate-800 text-white px-10 py-3 w-72 text-center">Presa de decisions</div>
+                <span class="text-stone-400">↓</span>
+                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Intervenció</div>
+                <span class="text-stone-400">↺</span>
+                <div class="border border-stone-300 bg-stone-50 px-10 py-3 w-64 text-center">Relectura</div>
             </div>
+            
+            <p class="mt-16 text-center text-lg text-stone-600 max-w-2xl mx-auto">
+                La relectura actualitza l'estat del sistema i inicia un nou cicle de decisió.
+            </p>
         </div>
     </section>
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- 4. Entrenament -->
-    <section id="entrenament" class="py-24 md:py-32 px-6">
-        <div class="max-w-3xl mx-auto reveal">
-            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
-                Què s'entrena.
-            </h2>
-            <p class="mt-8 text-lg text-stone-600 leading-relaxed">
-                El SIIPP desenvolupa capacitats operatives que permeten mantenir la qualitat de la intervenció quan augmenta la pressió.
-            </p>
-            
-            <div class="mt-16 space-y-10">
-                <div class="border-t border-stone-200 pt-8">
-                    <p class="text-stone-900 font-medium">Capacitat de modular l'activació simpàtica</p>
-                </div>
-                <div class="border-t border-stone-200 pt-8">
-                    <p class="text-stone-900 font-medium">Capacitat de mantenir recursos cognitius sota pressió</p>
-                </div>
-                <div class="border-t border-stone-200 pt-8">
-                    <p class="text-stone-900 font-medium">Capacitat de conservar qualitat perceptiva</p>
-                </div>
-                <div class="border-t border-stone-200 pt-8">
-                    <p class="text-stone-900 font-medium">Capacitat de prendre decisions ajustades en contextos complexos</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="line-separator max-w-6xl mx-auto"></div>
-
-    <!-- 5. Doble línia d'aplicació -->
+    <!-- Doble línia d'aplicació -->
     <section id="aplicacio" class="py-24 md:py-32 px-6">
         <div class="max-w-6xl mx-auto reveal">
-            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight max-w-3xl">
+            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight mb-16">
                 Un mateix sistema. Dos nivells d'aplicació.
             </h2>
             
-            <div class="mt-16 grid md:grid-cols-2 gap-16 md:gap-24">
-                <div>
-                    <h3 class="text-xl text-stone-900 font-medium border-b border-stone-200 pb-4">Professionals</h3>
-                    <p class="mt-6 text-stone-600 leading-relaxed">
-                        Per a persones que necessiten desenvolupar capacitat individual d'intervenció.
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+                <div class="border-t border-stone-200 pt-8">
+                    <h3 class="text-2xl text-stone-900 font-medium">Professionals</h3>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg">
+                        Desenvolupament de la capacitat individual d'intervenció sota pressió.
                     </p>
-                    <ul class="mt-6 space-y-3 text-stone-600">
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Intervenció en crisi
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Contenció física i psicològica
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Defensa personal aplicada
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Regulació sota pressió
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Qualitat de decisió
-                        </li>
-                    </ul>
+                    <div class="mt-8">
+                        <a href="#" class="inline-block text-sm text-stone-900 border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors">
+                            Veure formacions
+                        </a>
+                    </div>
                 </div>
                 
-                <div>
-                    <h3 class="text-xl text-stone-900 font-medium border-b border-stone-200 pb-4">Organitzacions</h3>
-                    <p class="mt-6 text-stone-600 leading-relaxed">
-                        Per a centres i equips que necessiten integrar el sistema.
+                <div class="border-t border-stone-200 pt-8">
+                    <h3 class="text-2xl text-stone-900 font-medium">Organitzacions</h3>
+                    <p class="mt-4 text-stone-600 leading-relaxed text-lg">
+                        Implantació del sistema SIIPP en equips i institucions.
                     </p>
-                    <ul class="mt-6 space-y-3 text-stone-600">
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Formació d'equips
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Consultoria
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Implantació del sistema
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Desenvolupament de criteris d'intervenció
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-3 text-stone-400">—</span>
-                            Formació de referents interns
-                        </li>
-                    </ul>
+                    <div class="mt-8">
+                        <a href="#" class="inline-block text-sm text-stone-900 border-b border-stone-900 pb-1 hover:text-stone-600 hover:border-stone-600 transition-colors">
+                            Explorar consultoria
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -340,27 +264,27 @@
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- 6. Contextos -->
+    <!-- Contextos -->
     <section id="contextos" class="py-24 md:py-32 px-6">
-        <div class="max-w-6xl mx-auto reveal">
-            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
-                On s'aplica.
-            </h2>
+        <div class="max-w-3xl mx-auto reveal">
+            <p class="text-2xl md:text-3xl text-stone-900 leading-snug tracking-tight">
+                Aplicable a qualsevol context on la qualitat de la presa de decisions es degrada sota pressió.
+            </p>
             
-            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 text-lg text-stone-600">
-                <div class="border-b border-stone-200 pb-4">Diversitat funcional</div>
-                <div class="border-b border-stone-200 pb-4">Salut mental</div>
-                <div class="border-b border-stone-200 pb-4">Educació especial</div>
-                <div class="border-b border-stone-200 pb-4">Serveis socials</div>
-                <div class="border-b border-stone-200 pb-4">Entorns d'alta exigència</div>
-                <div class="border-b border-stone-200 pb-4">Professionals que intervenen sota pressió</div>
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 text-stone-600">
+                <div class="border-b border-stone-200 pb-3">Diversitat funcional</div>
+                <div class="border-b border-stone-200 pb-3">Salut mental</div>
+                <div class="border-b border-stone-200 pb-3">Educació</div>
+                <div class="border-b border-stone-200 pb-3">Seguretat</div>
+                <div class="border-b border-stone-200 pb-3">Emergències</div>
+                <div class="border-b border-stone-200 pb-3">Serveis socials</div>
             </div>
         </div>
     </section>
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- 7. Experiència -->
+    <!-- Experiència -->
     <section id="experiencia" class="py-24 md:py-32 px-6">
         <div class="max-w-3xl mx-auto reveal">
             <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
@@ -374,31 +298,42 @@
 
     <div class="line-separator max-w-6xl mx-auto"></div>
 
-    <!-- 8. Contacte -->
+    <!-- Cierre -->
+    <section class="py-24 md:py-32 px-6 bg-stone-100">
+        <div class="max-w-4xl mx-auto reveal text-center">
+            <p class="text-3xl md:text-5xl text-stone-900 leading-tight tracking-tight">
+                No entrenem respostes.
+            </p>
+            <p class="mt-4 text-3xl md:text-5xl text-stone-900 leading-tight tracking-tight">
+                Entrenem el sistema des del qual emergeixen les decisions.
+            </p>
+        </div>
+    </section>
+
+    <div class="line-separator max-w-6xl mx-auto"></div>
+
+    <!-- Contacte -->
     <section id="contacte" class="py-24 md:py-32 px-6">
         <div class="max-w-3xl mx-auto reveal">
-            <h2 class="text-3xl md:text-4xl text-stone-900 leading-tight tracking-tight">
-                Contacte.
-            </h2>
-            <p class="mt-6 text-lg text-stone-600">
+            <p class="text-lg text-stone-600 leading-relaxed mb-16">
                 Desenvolupa la capacitat del teu equip o la teva pràctica professional per mantenir qualitat de decisió sota pressió.
             </p>
             
-            <form class="mt-16 space-y-10" onsubmit="event.preventDefault();">
+            <form class="space-y-10" onsubmit="event.preventDefault();">
                 <div>
                     <label class="block text-sm text-stone-500 mb-2">Nom</label>
-                    <input type="text" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors" placeholder="">
+                    <input type="text" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors">
                 </div>
                 <div>
                     <label class="block text-sm text-stone-500 mb-2">Correu electrònic</label>
-                    <input type="email" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors" placeholder="">
+                    <input type="email" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors">
                 </div>
                 <div>
                     <label class="block text-sm text-stone-500 mb-2">Missatge</label>
-                    <textarea rows="4" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors resize-none" placeholder=""></textarea>
+                    <textarea rows="4" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors resize-none"></textarea>
                 </div>
                 <div class="pt-4">
-                    <button type="submit" class="bg-slate-800 text-white text-sm px-10 py-3.5 hover:bg-slate-700 transition-colors">
+                    <button type="submit" class="bg-slate-800 text-white text-sm px-10 py-3.5 hover:bg-stone-800 transition-colors">
                         Contactar
                     </button>
                 </div>
@@ -415,19 +350,11 @@
     </footer>
 
     <script>
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
