@@ -11,20 +11,11 @@
                 extend: {
                     colors: {
                         stone: {
-                            50: '#fafaf9',
-                            100: '#f5f5f4',
-                            200: '#e7e5e4',
-                            300: '#d6d3d1',
-                            400: '#a8a29e',
-                            500: '#78716c',
-                            600: '#57534e',
-                            700: '#44403c',
-                            800: '#292524',
-                            900: '#1c1917',
+                            50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1',
+                            400: '#a8a29e', 500: '#78716c', 600: '#57534e', 700: '#44403c',
+                            800: '#292524', 900: '#1c1917',
                         },
-                        slate: {
-                            800: '#1e293b',
-                        }
+                        slate: { 800: '#1e293b' }
                     },
                     fontFamily: {
                         sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
@@ -35,30 +26,14 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        body { 
-            background-color: #fafaf9; 
-            color: #1c1917;
-            -webkit-font-smoothing: antialiased;
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .line {
-            height: 1px;
-            background-color: #e7e5e4;
-            width: 100%;
-        }
+        body { background-color: #fafaf9; color: #1c1917; -webkit-font-smoothing: antialiased; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .line { height: 1px; background-color: #e7e5e4; width: 100%; }
     </style>
 </head>
 <body class="font-sans antialiased">
 
-    <!-- Navegació -->
     <nav class="fixed top-0 left-0 right-0 bg-stone-50/90 backdrop-blur-sm z-50 border-b border-stone-200">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="text-lg tracking-tight font-medium text-stone-900">SIIPP</a>
@@ -75,86 +50,70 @@
         <div class="max-w-5xl mx-auto reveal">
             <p class="text-stone-500 text-lg mb-8">Sistema Integral d'Intervenció Psicofísica</p>
             <h1 class="text-5xl md:text-7xl leading-tight tracking-tight text-stone-900 max-w-4xl">
-                La regulació és la condició que habilita la decisió.
+                La pressió és del context. La regulació és del sistema.
             </h1>
             <p class="mt-12 text-xl text-stone-600 max-w-2xl leading-relaxed">
-                Sistema d'organització psicofísica orientat a preservar la qualitat de decisió en contexts d'alta exigència.
+                El SIIPP entrena la regulació somàtica com a via d'entrada a la qualitat de decisió en contexts d'alta exigència.
             </p>
+            <div class="mt-12">
+                <a href="#contacte" class="inline-block bg-slate-800 text-white text-sm px-8 py-3.5 hover:bg-stone-800 transition-colors">
+                    Sol·licita informació
+                </a>
+            </div>
         </div>
     </section>
 
     <div class="line max-w-6xl mx-auto"></div>
 
-    <!-- Model (text pur) -->
+    <!-- Model -->
     <section id="model" class="py-32 md:py-48 px-6">
         <div class="max-w-4xl mx-auto reveal text-center">
             <p class="text-3xl md:text-5xl text-stone-900 leading-snug tracking-tight">
                 La regulació configura l'estat.<br>
                 L'estat modula la percepció.<br>
                 La percepció orienta la decisió.<br>
-                La decisió organitza la intervenció.<br>
-                La relectura actualitza la regulació.
+                La decisió organitza la intervenció.
             </p>
         </div>
     </section>
 
     <div class="line max-w-6xl mx-auto"></div>
 
-    <!-- Sistema: diagrama espiral obert (únic gràfic) -->
+    <!-- Espiral -->
     <section id="sistema" class="py-24 md:py-32 px-6">
-        <div class="max-w-6xl mx-auto reveal flex flex-col items-center">
-            
-            <svg viewBox="0 0 700 520" class="w-full h-auto max-w-4xl" xmlns="http://www.w3.org/2000/svg">
-                <!-- Espiral oberta orgànica -->
-                <path d="M 580 420 
-                         C 580 120, 120 120, 120 320 
-                         C 120 500, 480 500, 480 340
-                         C 480 220, 240 220, 240 320" 
+        <div class="max-w-5xl mx-auto reveal flex flex-col items-center">
+            <svg viewBox="0 0 600 350" class="w-full h-auto max-w-2xl" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 520 280 C 520 50, 80 50, 80 175 C 80 300, 350 300, 350 175" 
                       fill="none" stroke="#d6d3d1" stroke-width="1.5" stroke-linecap="round"/>
+                <polygon points="350,175 340,185 360,185" fill="#78716c"/>
                 
-                <!-- Fletxa de continuïtat al final de l'espiral -->
-                <polygon points="240,320 235,330 245,330" fill="#a8a29e" transform="rotate(-70 240 320)"/>
+                <path d="M 350 195 Q 450 320 520 300" fill="none" stroke="#a8a29e" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <polygon points="520,300 510,295 510,305" fill="#a8a29e"/>
                 
-                <!-- Regulació: inici, baix dreta -->
-                <circle cx="580" cy="420" r="38" fill="#fafaf9" stroke="#57534e" stroke-width="1.5"/>
-                <text x="580" y="426" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#1c1917" font-weight="500">Regulació</text>
+                <circle cx="520" cy="280" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
+                <text x="520" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Cos</text>
                 
-                <!-- Estat: dalt esquerra -->
-                <circle cx="260" cy="145" r="30" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="260" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Estat</text>
+                <circle cx="300" cy="50" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
+                <text x="300" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Regulació</text>
                 
-                <!-- Percepció: esquerra -->
-                <circle cx="120" cy="320" r="30" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="120" y="325" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Percepció</text>
+                <circle cx="80" cy="175" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
+                <text x="80" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Percepció</text>
                 
-                <!-- Decisió: destacada, sobre la trajectòria però amb pes propi -->
-                <rect x="430" y="295" width="110" height="42" rx="3" fill="#1e293b" stroke="#1e293b" stroke-width="1"/>
-                <text x="485" y="322" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#fff" font-weight="500">Decisió</text>
+                <circle cx="300" cy="280" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
+                <text x="300" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Acció</text>
                 
-                <!-- Intervenció: dreta -->
-                <circle cx="480" cy="340" r="30" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="480" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Intervenció</text>
-                
-                <!-- Relectura: interior -->
-                <circle cx="300" cy="285" r="30" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="300" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Relectura</text>
-                
-                <!-- Reentrada: de Relectura a nova Regulació (fora de l'espiral) -->
-                <path d="M 325 265 Q 420 180 540 390" fill="none" stroke="#a8a29e" stroke-width="1.5" stroke-dasharray="4 3"/>
-                <polygon points="540,390 530,385 535,395" fill="#a8a29e"/>
-                
-                <text x="460" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#78716c">Regulació actualitzada</text>
+                <rect x="300" y="155" width="100" height="36" rx="2" fill="#1e293b"/>
+                <text x="350" y="178" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#fff" font-weight="500">Decisió</text>
             </svg>
-            
             <p class="mt-16 text-center text-lg text-stone-600 max-w-xl">
-                Cada iteració actualitza l'estat del sistema. La relectura reinicia la condició des d'una nova configuració.
+                Cada acció actualitza el cos. La relectura incorpora nova informació a la percepció i reinicia el cicle.
             </p>
         </div>
     </section>
 
     <div class="line max-w-6xl mx-auto"></div>
 
-    <!-- Ventana d'Agència (integrada, sense títol) -->
+    <!-- Ventana d'Agència -->
     <section class="py-32 md:py-48 px-6 bg-stone-100">
         <div class="max-w-3xl mx-auto reveal">
             <p class="text-2xl md:text-4xl text-stone-900 leading-snug tracking-tight">
@@ -165,14 +124,25 @@
 
     <div class="line max-w-6xl mx-auto"></div>
 
-    <!-- Aplicació: dues escales, sense títol de secció -->
+    <!-- Corregulació -->
     <section class="py-24 md:py-32 px-6">
+        <div class="max-w-3xl mx-auto reveal">
+            <p class="text-2xl md:text-3xl text-stone-900 leading-snug tracking-tight">
+                La regulació pròpia genera condicions de corregulació en el sistema interactiu.
+            </p>
+        </div>
+    </section>
+
+    <div class="line max-w-6xl mx-auto"></div>
+
+    <!-- Aplicació -->
+    <section class="py-24 md:py-32 px-6 bg-stone-100">
         <div class="max-w-6xl mx-auto reveal grid md:grid-cols-2 gap-16">
             <div>
                 <p class="text-sm text-stone-500 uppercase tracking-wide mb-4">Escala individual</p>
                 <p class="text-2xl text-stone-900 leading-snug mb-6">Personal</p>
                 <p class="text-stone-600 leading-relaxed">
-                    Regulació, percepció, decisió i intervenció aplicades a la contenció física, la contenció psicològica, la defensa personal i la gestió de crisi.
+                    Regulació, percepció, decisió i intervenció aplicades a la contenció psicològica, la gestió de crisi i el Mètode de Contenció Respectuosa (Contenció Física).
                 </p>
             </div>
             <div>
@@ -187,11 +157,22 @@
 
     <div class="line max-w-6xl mx-auto"></div>
 
-    <!-- Trajectòria -->
+    <!-- Dinàmica transversal -->
     <section class="py-24 md:py-32 px-6">
         <div class="max-w-3xl mx-auto reveal">
+            <p class="text-2xl md:text-3xl text-stone-900 leading-snug tracking-tight">
+                Decidir sostener i sostener lo decidit organitzen l'absorció i la projecció de tensió sota regulació.
+            </p>
+        </div>
+    </section>
+
+    <div class="line max-w-6xl mx-auto"></div>
+
+    <!-- Trajectòria -->
+    <section class="py-24 md:py-32 px-6 bg-stone-100">
+        <div class="max-w-3xl mx-auto reveal">
             <p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
-                Desenvolupat a partir de vint anys d'intervenció directa, formació d'equips, implantació de sistemes i desenvolupament del MCR. Operatiu en diversitat funcional, salut mental, educació, seguretat, emergències i serveis socials.
+                Desenvolupat a partir de vint anys d'intervenció directa, formació d'equips, implantació de sistemes i desenvolupament del Mètode de Contenció Respectuosa. Operatiu en diversitat funcional, salut mental, educació, seguretat, emergències i serveis socials.
             </p>
         </div>
     </section>
@@ -199,10 +180,10 @@
     <div class="line max-w-6xl mx-auto"></div>
 
     <!-- Tancament -->
-    <section class="py-32 md:py-48 px-6 bg-stone-100">
+    <section class="py-32 md:py-48 px-6">
         <div class="max-w-5xl mx-auto reveal text-center">
             <p class="text-3xl md:text-6xl text-stone-900 leading-tight tracking-tight">
-                Cada decisió actualitza el sistema que la fa possible.
+                La regulació és el primer acte de qualsevol intervenció.
             </p>
         </div>
     </section>
@@ -237,7 +218,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-12 px-6 border-t border-stone-200">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-stone-500">
             <span>SIIPP</span>
