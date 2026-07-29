@@ -4,24 +4,40 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SIIPP · Sistema Integral d'Intervenció Psicofísica</title>
 
-<meta name="description" content="Sistema Integral d'Intervenció Psicofísica orientat a millorar la qualitat de decisió sota pressió.">
+<meta name="description" content="Desenvolupament professional per millorar la qualitat de decisió sota pressió.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-/************************************************/
-/* RESET */
-/************************************************/
+:root{
+
+--navy:#0D3448;
+--teal:#2E7F82;
+--green:#54B08D;
+
+--text:#1E293B;
+--text-soft:#64748B;
+
+--bg:#FFFFFF;
+--bg-soft:#F7FAFC;
+
+--line:#E7EEF3;
+
+--radius:26px;
+
+--shadow:0 25px 70px rgba(15,30,45,.06);
+
+--container:1280px;
+
+}
 
 *{
 margin:0;
@@ -37,73 +53,35 @@ body{
 
 font-family:'Inter',sans-serif;
 
-background:#FFFFFF;
+background:white;
 
-color:#1F2937;
-
-overflow-x:hidden;
+color:var(--text);
 
 line-height:1.65;
+
+overflow-x:hidden;
 
 -webkit-font-smoothing:antialiased;
 
 }
 
 img{
+
 display:block;
 max-width:100%;
+
 }
 
 a{
+
 text-decoration:none;
 color:inherit;
-}
-
-button{
-font-family:inherit;
-}
-
-/************************************************/
-/* VARIABLES */
-/************************************************/
-
-:root{
-
---primary:#0D3B4C;
-
---primary-light:#145267;
-
---secondary:#4EA88B;
-
---bg:#FFFFFF;
-
---soft:#F7FAFB;
-
---soft-2:#EDF4F6;
-
---text:#1F2937;
-
---text-soft:#667085;
-
---border:#E5E7EB;
-
---radius:22px;
-
---shadow:
-
-0 20px 60px rgba(8,25,35,.06);
-
---container:1280px;
 
 }
-
-/************************************************/
-/* LAYOUT */
-/************************************************/
 
 .container{
 
-width:min(92%,1280px);
+width:min(92%,var(--container));
 
 margin:auto;
 
@@ -117,103 +95,81 @@ position:relative;
 
 }
 
-.grid{
+header{
 
-display:grid;
+position:fixed;
 
-gap:40px;
+top:0;
 
-}
+left:0;
 
-.grid-2{
+width:100%;
 
-grid-template-columns:1fr 1fr;
+z-index:1000;
 
-}
-
-.grid-3{
-
-grid-template-columns:repeat(3,1fr);
+transition:.35s;
 
 }
 
-.grid-4{
+header.scrolled{
 
-grid-template-columns:repeat(4,1fr);
+background:rgba(255,255,255,.92);
 
-}
+backdrop-filter:blur(18px);
 
-/************************************************/
-/* TYPOGRAPHY */
-/************************************************/
-
-.overline{
-
-display:inline-block;
-
-font-size:.82rem;
-
-font-weight:700;
-
-letter-spacing:.14em;
-
-text-transform:uppercase;
-
-color:var(--secondary);
-
-margin-bottom:20px;
+border-bottom:1px solid rgba(0,0,0,.04);
 
 }
 
-.section-title{
+nav{
 
-font-size:clamp(2.3rem,5vw,4rem);
+height:92px;
 
-line-height:1.08;
+display:flex;
 
-font-weight:800;
+justify-content:space-between;
 
-color:var(--primary);
-
-margin-bottom:28px;
-
-max-width:900px;
+align-items:center;
 
 }
 
-.section-intro{
+.logo{
 
-max-width:760px;
+font-size:1.5rem;
 
-font-size:1.15rem;
+font-weight:900;
 
-color:var(--text-soft);
+letter-spacing:.08em;
 
-}
-
-.small-title{
-
-font-size:1.35rem;
-
-font-weight:700;
-
-margin-bottom:16px;
-
-color:var(--primary);
+color:var(--navy);
 
 }
 
-p{
+.menu{
 
-margin-bottom:1rem;
+display:flex;
+
+align-items:center;
+
+gap:42px;
 
 }
 
-/************************************************/
-/* BUTTONS */
-/************************************************/
+.menu a{
 
-.btn{
+font-weight:500;
+
+transition:.25s;
+
+}
+
+.menu a:hover{
+
+color:var(--green);
+
+}
+
+.button{
 
 display:inline-flex;
 
@@ -225,123 +181,35 @@ padding:18px 34px;
 
 border-radius:999px;
 
-font-weight:600;
-
-transition:.35s;
-
-}
-
-.btn-primary{
-
-background:var(--primary);
-
-color:white;
-
-}
-
-.btn-primary:hover{
-
-background:var(--primary-light);
-
-transform:translateY(-3px);
-
-}
-
-.btn-outline{
-
-border:1px solid var(--border);
-
-background:white;
-
-}
-
-.btn-outline:hover{
-
-background:var(--soft);
-
-}
-
-/************************************************/
-/* HEADER */
-/************************************************/
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-z-index:999;
-
-transition:.35s;
-
-}
-
-header.active{
-
-background:rgba(255,255,255,.92);
-
-backdrop-filter:blur(18px);
-
-box-shadow:0 4px 40px rgba(0,0,0,.06);
-
-}
-
-nav{
-
-height:92px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-}
-
-.logo{
-
-font-size:1.5rem;
-
-font-weight:800;
-
-letter-spacing:.06em;
-
-color:var(--primary);
-
-}
-
-.menu{
-
-display:flex;
-
-align-items:center;
-
-gap:38px;
-
-}
-
-.menu a{
-
-font-weight:500;
+font-weight:700;
 
 transition:.3s;
 
 }
 
-.menu a:hover{
+.primary{
 
-color:var(--secondary);
+background:var(--navy);
+
+color:white;
 
 }
 
-/************************************************/
-/* HERO */
-/************************************************/
+.primary:hover{
+
+transform:translateY(-3px);
+
+background:#184C63;
+
+}
+
+.secondary{
+
+border:1px solid var(--line);
+
+background:white;
+
+}
 
 .hero{
 
@@ -351,45 +219,107 @@ display:flex;
 
 align-items:center;
 
-padding-top:120px;
-
-overflow:hidden;
+padding-top:110px;
 
 background:
 
-linear-gradient(180deg,#ffffff 0%,#F9FCFD 100%);
+radial-gradient(circle at 100% 0%,rgba(84,176,141,.08),transparent 40%),
+
+radial-gradient(circle at 0% 100%,rgba(13,52,72,.05),transparent 40%),
+
+linear-gradient(#FFFFFF,#FBFCFD);
+
+overflow:hidden;
 
 }
 
-.hero::before{
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:1.05fr .95fr;
+
+gap:90px;
+
+align-items:center;
+
+}
+
+.overline{
+
+display:inline-block;
+
+margin-bottom:24px;
+
+font-size:.82rem;
+
+font-weight:700;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+color:var(--green);
+
+}
+
+h1{
+
+font-size:clamp(4rem,7vw,6.2rem);
+
+line-height:.95;
+
+font-weight:900;
+
+letter-spacing:-.05em;
+
+color:var(--navy);
+
+}
+
+.lead{
+
+margin-top:36px;
+
+font-size:1.22rem;
+
+color:var(--text-soft);
+
+max-width:670px;
+
+}
+
+.hero-actions{
+
+margin-top:54px;
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-photo{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:760px;
+
+}
+
+.hero-photo::before{
 
 content:"";
 
 position:absolute;
-
-right:-220px;
-
-top:-220px;
-
-width:720px;
-
-height:720px;
-
-border-radius:50%;
-
-background:radial-gradient(circle,rgba(78,168,139,.10),transparent 70%);
-
-}
-
-.hero::after{
-
-content:"";
-
-position:absolute;
-
-left:-240px;
-
-bottom:-240px;
 
 width:620px;
 
@@ -397,157 +327,115 @@ height:620px;
 
 border-radius:50%;
 
-background:radial-gradient(circle,rgba(13,59,76,.05),transparent 70%);
+background:linear-gradient(135deg,rgba(84,176,141,.08),rgba(46,127,130,.03));
 
 }
 
-/************************************************/
-/* CARDS */
-/************************************************/
+.photo{
 
-.card{
+position:relative;
 
-background:white;
+width:520px;
 
-padding:42px;
+height:650px;
 
-border:1px solid var(--border);
+border-radius:34px;
 
-border-radius:var(--radius);
+border:2px dashed #C9D7DE;
 
-transition:.35s;
+background:linear-gradient(135deg,#F8FBFC,#EEF5F7);
 
-}
+display:flex;
 
-.card:hover{
+align-items:center;
 
-transform:translateY(-10px);
+justify-content:center;
+
+overflow:hidden;
 
 box-shadow:var(--shadow);
 
 }
 
-/************************************************/
-/* IMAGE PLACEHOLDER */
-/************************************************/
-
-.image-placeholder{
-
-width:100%;
-
-aspect-ratio:4/5;
-
-border-radius:28px;
-
-background:
-
-linear-gradient(135deg,#F8FBFC,#EDF5F6);
-
-border:2px dashed #C8D5DA;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.image-placeholder::before{
+.photo::before{
 
 content:"FOTOGRAFIA";
 
-font-size:.8rem;
+font-size:.82rem;
 
-font-weight:700;
+font-weight:800;
 
 letter-spacing:.18em;
 
-color:#9BAAB1;
+color:#9BAEB8;
 
 }
 
-.image-placeholder::after{
+.hero-bottom{
 
-content:"";
+margin-top:90px;
 
-position:absolute;
+display:grid;
 
-width:220px;
+grid-template-columns:repeat(3,1fr);
 
-height:220px;
-
-border-radius:50%;
-
-background:rgba(13,59,76,.04);
+gap:50px;
 
 }
 
-/************************************************/
-/* ICON HOLDER */
-/************************************************/
+.metric{
 
-.icon-box{
+padding-top:28px;
 
-width:68px;
+border-top:1px solid var(--line);
 
-height:68px;
+}
 
-border-radius:18px;
+.metric strong{
 
-display:flex;
+display:block;
 
-align-items:center;
+font-size:2.7rem;
+
+font-weight:900;
+
+color:var(--navy);
+
+}
+
+.metric span{
+
+display:block;
+
+margin-top:10px;
+
+font-size:.95rem;
+
+color:var(--text-soft);
+
+}
+
+@media(max-width:1100px){
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-actions{
 
 justify-content:center;
 
-background:#EDF7F3;
-
-color:var(--secondary);
-
-margin-bottom:24px;
-
-font-size:1.2rem;
-
-font-weight:700;
-
 }
 
-/************************************************/
-/* ANIMATIONS */
-/************************************************/
-
-.fade{
-
-opacity:0;
-
-transform:translateY(50px);
-
-transition:1s;
-
-}
-
-.fade.visible{
-
-opacity:1;
-
-transform:none;
-
-}
-
-/************************************************/
-/* RESPONSIVE */
-/************************************************/
-
-@media(max-width:1080px){
-
-.grid-2,
-.grid-3,
-.grid-4{
+.hero-bottom{
 
 grid-template-columns:1fr;
 
@@ -559,9 +447,11 @@ display:none;
 
 }
 
-section{
+.hero-photo{
 
-padding:100px 0;
+height:auto;
+
+margin-top:70px;
 
 }
 
@@ -573,33 +463,27 @@ padding:100px 0;
 
 <body>
 
-    <!-- ===================================================== -->
-<!-- HEADER -->
-<!-- ===================================================== -->
-
 <header id="header">
 
 <div class="container">
 
 <nav>
 
-<a href="#" class="logo">
+<div class="logo">
 
 SIIPP
 
-</a>
+</div>
 
 <div class="menu">
 
-<a href="#paradigma">Sistema</a>
+<a href="#">Sistema</a>
 
-<a href="#arquitectura">Arquitectura</a>
+<a href="#">Metodologia</a>
 
-<a href="#capacitats">Capacitats</a>
+<a href="#">Experiència</a>
 
-<a href="#mcr">MCR</a>
-
-<a href="#contacte" class="btn btn-primary">
+<a href="#" class="button primary">
 
 Concertar una reunió
 
@@ -613,19 +497,13 @@ Concertar una reunió
 
 </header>
 
-
-
-<!-- ===================================================== -->
-<!-- HERO -->
-<!-- ===================================================== -->
-
 <section class="hero">
 
 <div class="container">
 
-<div class="grid grid-2" style="align-items:center;gap:90px;">
+<div class="hero-grid">
 
-<div class="fade">
+<div>
 
 <div class="overline">
 
@@ -633,79 +511,59 @@ Sistema Integral d'Intervenció Psicofísica
 
 </div>
 
-<h1 class="section-title">
+<h1>
 
-La qualitat de la intervenció depèn de l'estat del professional que intervé.
+Professionals que decideixen millor.<br>
+
+Organitzacions que intervenen millor.
 
 </h1>
 
-<p class="section-intro">
+<p class="lead">
 
-El SIIPP desenvolupa la regulació psicofísica que sosté la percepció, la presa de decisions i la capacitat d'intervenció dels professionals que actuen en situacions d'alta intensitat.
+El SIIPP desenvolupa la regulació psicofísica dels professionals perquè la qualitat de la percepció, la presa de decisions i la intervenció es mantinguin estables sota pressió.
 
 </p>
 
-<div style="margin-top:45px;display:flex;gap:18px;flex-wrap:wrap;">
+<div class="hero-actions">
 
-<a href="#contacte" class="btn btn-primary">
+<a href="#" class="button primary">
 
-Sol·licitar una reunió
+Concertar una reunió
 
 </a>
 
-<a href="#paradigma" class="btn btn-outline">
+<a href="#" class="button secondary">
 
-Descobrir el sistema
+Conèixer el sistema
 
 </a>
 
 </div>
 
-<div style="margin-top:70px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;">
+<div class="hero-bottom">
 
-<div>
+<div class="metric">
 
-<div style="font-size:2rem;font-weight:800;color:var(--primary);">
+<strong>+400</strong>
 
-+400
-
-</div>
-
-<div style="color:var(--text-soft);font-size:.95rem;">
-
-Professionals formats
+<span>Professionals formats</span>
 
 </div>
 
-</div>
+<div class="metric">
 
-<div>
+<strong>15+</strong>
 
-<div style="font-size:2rem;font-weight:800;color:var(--primary);">
-
-3
+<span>Anys de desenvolupament</span>
 
 </div>
 
-<div style="color:var(--text-soft);font-size:.95rem;">
+<div class="metric">
 
-Organitzacions
+<strong>3</strong>
 
-</div>
-
-</div>
-
-<div>
-
-<div style="font-size:2rem;font-weight:800;color:var(--primary);">
-
-100%
-
-</div>
-
-<div style="color:var(--text-soft);font-size:.95rem;">
-
-Formació experiencial
+<span>Organitzacions que ja l'apliquen</span>
 
 </div>
 
@@ -713,21 +571,11 @@ Formació experiencial
 
 </div>
 
-</div>
+<div class="hero-photo">
 
+<div class="photo">
 
-
-<div class="fade">
-
-<div class="image-placeholder">
-
-<!--
-
-SUBSTITUIR DESPRÉS PER:
-
-<img src="hero.webp" alt="">
-
--->
+<!-- HERO.webp -->
 
 </div>
 
@@ -739,205 +587,67 @@ SUBSTITUIR DESPRÉS PER:
 
 </section>
 
+<!-- ========================================================= -->
+<!-- POSICIONAMENT -->
+<!-- ========================================================= -->
 
-
-<!-- ===================================================== -->
-<!-- CANVI DE PARADIGMA -->
-<!-- ===================================================== -->
-
-<section id="paradigma">
+<section id="posicionament">
 
 <div class="container">
 
-<div class="center">
+<div style="display:grid;grid-template-columns:.95fr 1.05fr;gap:100px;align-items:center;">
+
+<div>
+
+<div class="photo" style="height:640px;">
+
+<!-- FOTOGRAFIA -->
+
+</div>
+
+</div>
+
+<div>
 
 <div class="overline">
 
-Canvi de perspectiva
+El nostre enfocament
 
 </div>
 
-<h2 class="section-title">
+<h2>
 
-El desenvolupament del professional és el punt de partida de la intervenció.
+La qualitat assistencial creix quan els professionals amplien la seva capacitat de decisió.
 
 </h2>
 
-<p class="section-intro" style="margin:auto;">
+<p class="lead" style="margin-top:36px;">
 
-La regulació del professional conserva la capacitat de lectura, sosté la presa de decisions i crea les condicions perquè la intervenció afavoreixi processos de corregulació amb l'usuari.
+El SIIPP impulsa un desenvolupament professional orientat a conservar claredat, criteri i capacitat d'acció en els moments de més exigència. La regulació psicofísica es converteix en la base que sosté la percepció, la decisió i la intervenció.
 
 </p>
 
-</div>
+<div style="margin-top:60px;display:flex;flex-direction:column;gap:34px;">
 
-<div style="margin-top:90px;">
+<div style="display:flex;gap:24px;align-items:flex-start;">
 
-<div class="grid grid-2" style="gap:60px;align-items:center;">
+<div style="width:58px;height:58px;border-radius:18px;background:rgba(84,176,141,.12);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--green);flex-shrink:0;">
 
-<div class="card fade">
-
-<div class="icon-box">
-
-A
+01
 
 </div>
+
+<div>
 
 <h3 class="small-title">
 
-Models centrats en la conducta
+Professionals més disponibles.
 
 </h3>
-
-<div style="margin-top:35px;font-size:1.1rem;line-height:2.2;color:var(--text-soft);">
-
-Conducta
-
-<br>
-
-↓
-
-<br>
-
-Intervenció
-
-</div>
-
-</div>
-
-
-
-<div class="card fade" style="border:2px solid rgba(78,168,139,.25);">
-
-<div class="icon-box">
-
-SIIPP
-
-</div>
-
-<h3 class="small-title">
-
-Sistema centrat en el professional
-
-</h3>
-
-<div style="margin-top:35px;font-size:1.1rem;line-height:2.1;color:var(--primary);font-weight:600;">
-
-Professional
-
-<br>
-
-↓
-
-<br>
-
-Regulació
-
-<br>
-
-↓
-
-<br>
-
-Percepció
-
-<br>
-
-↓
-
-<br>
-
-Decisió
-
-<br>
-
-↓
-
-<br>
-
-Intervenció
-
-<br>
-
-↓
-
-<br>
-
-Corregulació
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- QUÈ ÉS EL SIIPP -->
-<!-- ===================================================== -->
-
-<section>
-
-<div class="container">
-
-<div class="grid grid-2" style="align-items:center;gap:90px;">
-
-<div class="fade">
-
-<div class="overline">
-
-El sistema
-
-</div>
-
-<h2 class="section-title">
-
-Una arquitectura per conservar la qualitat de decisió sota pressió.
-
-</h2>
-
-<p class="section-intro">
-
-El SIIPP organitza la intervenció des de la regulació psicofísica del professional. Aquesta regulació sosté la percepció, preserva la capacitat de decidir i permet ajustar l'acció a les necessitats reals de cada situació.
-
-</p>
-
-<br><br>
 
 <p>
 
-El sistema opera des d'una lògica <strong>bottom-up</strong>, en la qual el cos constitueix la porta d'entrada a la regulació i aquesta conserva els recursos necessaris perquè la lectura, la decisió i l'acció es mantinguin organitzades sota pressió.
-
-</p>
-
-</div>
-
-<div class="fade">
-
-<div class="card" style="padding:60px;">
-
-<div style="display:flex;flex-direction:column;gap:28px;">
-
-<div style="display:flex;align-items:center;gap:25px;">
-
-<div class="icon-box">1</div>
-
-<div>
-
-<h3 class="small-title" style="margin:0;">
-
-Regulació
-
-</h3>
-
-<p style="margin-top:8px;color:var(--text-soft);">
-
-Conserva l'organització del professional.
+La regulació amplia la disponibilitat corporal i cognitiva per mantenir qualitat de lectura i capacitat de resposta durant tota la intervenció.
 
 </p>
 
@@ -945,27 +655,25 @@ Conserva l'organització del professional.
 
 </div>
 
-<div style="text-align:center;font-size:1.6rem;color:#B9C5CB;">
+<div style="display:flex;gap:24px;align-items:flex-start;">
 
-↓
+<div style="width:58px;height:58px;border-radius:18px;background:rgba(84,176,141,.12);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--green);flex-shrink:0;">
+
+02
 
 </div>
 
-<div style="display:flex;align-items:center;gap:25px;">
-
-<div class="icon-box">2</div>
-
 <div>
 
-<h3 class="small-title" style="margin:0;">
+<h3 class="small-title">
 
-Percepció
+Equips més coherents.
 
 </h3>
 
-<p style="margin-top:8px;color:var(--text-soft);">
+<p>
 
-Amplia la qualitat de lectura de la situació.
+Compartir un mateix marc d'intervenció facilita la coordinació, reforça la confiança entre professionals i incrementa la consistència de les decisions.
 
 </p>
 
@@ -973,55 +681,25 @@ Amplia la qualitat de lectura de la situació.
 
 </div>
 
-<div style="text-align:center;font-size:1.6rem;color:#B9C5CB;">
+<div style="display:flex;gap:24px;align-items:flex-start;">
 
-↓
+<div style="width:58px;height:58px;border-radius:18px;background:rgba(84,176,141,.12);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--green);flex-shrink:0;">
+
+03
 
 </div>
-
-<div style="display:flex;align-items:center;gap:25px;">
-
-<div class="icon-box">3</div>
 
 <div>
 
-<h3 class="small-title" style="margin:0;">
+<h3 class="small-title">
 
-Decisió
-
-</h3>
-
-<p style="margin-top:8px;color:var(--text-soft);">
-
-Selecciona l'acció més ajustada.
-
-</p>
-
-</div>
-
-</div>
-
-<div style="text-align:center;font-size:1.6rem;color:#B9C5CB;">
-
-↓
-
-</div>
-
-<div style="display:flex;align-items:center;gap:25px;">
-
-<div class="icon-box">4</div>
-
-<div>
-
-<h3 class="small-title" style="margin:0;">
-
-Intervenció
+Organitzacions més sòlides.
 
 </h3>
 
-<p style="margin-top:8px;color:var(--text-soft);">
+<p>
 
-Afavoreix processos de corregulació.
+El desenvolupament dels professionals es tradueix en una pràctica assistencial més estable, més segura i més sostenible en el temps.
 
 </p>
 
@@ -1041,385 +719,55 @@ Afavoreix processos de corregulació.
 
 
 
-<!-- ===================================================== -->
-<!-- PRINCIPIS -->
-<!-- ===================================================== -->
+<!-- ========================================================= -->
+<!-- IMPACTE -->
+<!-- ========================================================= -->
 
-<section style="background:var(--soft);">
-
-<div class="container">
-
-<div class="center fade">
-
-<div class="overline">
-
-Fonaments
-
-</div>
-
-<h2 class="section-title">
-
-El sistema es construeix sobre una seqüència funcional.
-
-</h2>
-
-</div>
-
-<div style="margin-top:90px;" class="grid grid-4">
-
-<div class="card fade">
-
-<div class="icon-box">
-
-◎
-
-</div>
-
-<h3 class="small-title">
-
-Cos
-
-</h3>
-
-<p>
-
-La regulació comença des del cos mitjançant l'exhalació lenta i l'ancoratge somàtic.
-
-</p>
-
-</div>
-
-<div class="card fade">
-
-<div class="icon-box">
-
-◉
-
-</div>
-
-<h3 class="small-title">
-
-Regulació
-
-</h3>
-
-<p>
-
-Conserva els recursos necessaris perquè el professional mantingui organització sota pressió.
-
-</p>
-
-</div>
-
-<div class="card fade">
-
-<div class="icon-box">
-
-◌
-
-</div>
-
-<h3 class="small-title">
-
-Percepció
-
-</h3>
-
-<p>
-
-La regulació amplia la sensibilitat per llegir el propi estat, l'usuari i l'entorn.
-
-</p>
-
-</div>
-
-<div class="card fade">
-
-<div class="icon-box">
-
-▲
-
-</div>
-
-<h3 class="small-title">
-
-Acció
-
-</h3>
-
-<p>
-
-La decisió orienta una intervenció ajustada, proporcional i sostinguda durant tota la situació.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- ARQUITECTURA -->
-<!-- ===================================================== -->
-
-<section id="arquitectura">
+<section style="background:var(--bg-soft);">
 
 <div class="container">
 
-<div class="center fade">
+<div style="text-align:center;max-width:900px;margin:auto;">
 
 <div class="overline">
 
-Arquitectura del sistema
+Impacte organitzatiu
 
 </div>
 
-<h2 class="section-title">
+<h2>
 
-Una mateixa arquitectura permet actuar amb coherència en situacions diferents.
+El desenvolupament professional genera valor en tota l'organització.
 
 </h2>
 
-<p class="section-intro" style="margin:auto;">
+<p class="lead" style="max-width:760px;margin:36px auto 0;">
 
-El SIIPP integra lectura, decisió i intervenció dins d'una estructura comuna que facilita l'organització dels professionals sota pressió.
+Cada decisió ajustada reforça la qualitat de la intervenció. Cada intervenció coherent reforça la qualitat del servei.
 
 </p>
 
 </div>
 
-<div style="margin-top:90px;" class="grid grid-3">
+<div style="margin-top:110px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;">
 
-<div class="card fade">
-
-<div class="icon-box">
-
-Ⅰ
-
-</div>
+<div class="card">
 
 <h3 class="small-title">
 
-Centres rectors
+Qualitat assistencial
 
 </h3>
 
 <p>
 
-La lectura integra simultàniament tres referències funcionals.
+Intervencions més consistents i ajustades a cada situació.
 
 </p>
 
-<div style="margin-top:30px;display:flex;flex-direction:column;gap:18px;">
-
-<div>
-
-<strong>Cap</strong><br>
-
-<span style="color:var(--text-soft);">
-
-Lectura
-
-</span>
-
 </div>
 
-<div>
-
-<strong>Pit</strong><br>
-
-<span style="color:var(--text-soft);">
-
-Relació i proporcionalitat
-
-</span>
-
-</div>
-
-<div>
-
-<strong>Tripes</strong><br>
-
-<span style="color:var(--text-soft);">
-
-Urgència i necessitat d'acció
-
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="card fade">
-
-<div class="icon-box">
-
-Ⅱ
-
-</div>
-
-<h3 class="small-title">
-
-Espais d'intervenció
-
-</h3>
-
-<p>
-
-La intervenció es desplega en tres espais que es poden combinar de manera dinàmica.
-
-</p>
-
-<div style="margin-top:30px;display:flex;flex-direction:column;gap:18px;">
-
-<div>
-
-<strong>Presència i comunicació</strong>
-
-</div>
-
-<div>
-
-<strong>Contacte</strong>
-
-</div>
-
-<div>
-
-<strong>Restauració</strong>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="card fade">
-
-<div class="icon-box">
-
-Ⅲ
-
-</div>
-
-<h3 class="small-title">
-
-Operadors
-
-</h3>
-
-<p>
-
-Els operadors organitzen la forma d'intervenir en qualsevol context.
-
-</p>
-
-<div style="margin-top:25px;display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:.95rem;">
-
-<div>Dirigir</div>
-
-<div>Prioritzar</div>
-
-<div>Enfocar</div>
-
-<div>Regular distància</div>
-
-<div>Soltar</div>
-
-<div>Limitar</div>
-
-<div>Sortir</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ===================================================== -->
-<!-- CAPACITATS -->
-<!-- ===================================================== -->
-
-<section id="capacitats">
-
-<div class="container">
-
-<div class="overline">
-
-Desenvolupament professional
-
-</div>
-
-<h2 class="section-title">
-
-Capacitats que es transfereixen a la pràctica diària.
-
-</h2>
-
-<p class="section-intro">
-
-L'entrenament desenvolupa capacitats que sostenen la qualitat de la intervenció abans, durant i després de les situacions d'alta intensitat.
-
-</p>
-
-<div style="margin-top:80px;" class="grid grid-4">
-
-<div class="card fade">
-
-<h3 class="small-title">
-
-Regulació psicofísica
-
-</h3>
-
-</div>
-
-<div class="card fade">
-
-<h3 class="small-title">
-
-Lectura de l'activació
-
-</h3>
-
-</div>
-
-<div class="card fade">
-
-<h3 class="small-title">
-
-Presa de decisions
-
-</h3>
-
-</div>
-
-<div class="card fade">
-
-<h3 class="small-title">
-
-Comunicació
-
-</h3>
-
-</div>
-
-<div class="card fade">
+<div class="card">
 
 <h3 class="small-title">
 
@@ -1427,35 +775,43 @@ Coordinació
 
 </h3>
 
-</div>
+<p>
 
-<div class="card fade">
+Equips que comparteixen criteris i actuen amb més coherència.
 
-<h3 class="small-title">
-
-Intervenció
-
-</h3>
+</p>
 
 </div>
 
-<div class="card fade">
+<div class="card">
 
 <h3 class="small-title">
 
-Restauració
+Seguretat
 
 </h3>
+
+<p>
+
+Professionals amb més capacitat per sostenir la intervenció sota pressió.
+
+</p>
 
 </div>
 
-<div class="card fade">
+<div class="card">
 
 <h3 class="small-title">
 
-Treball en equip
+Desenvolupament
 
 </h3>
+
+<p>
+
+Una cultura d'aprenentatge que es consolida en la pràctica quotidiana.
+
+</p>
 
 </div>
 
@@ -1465,99 +821,105 @@ Treball en equip
 
 </section>
 
-<!-- ===================================================== -->
-<!-- MÈTODE DE CONTENCIÓ RESPECTUOSA -->
-<!-- ===================================================== -->
+<!-- ========================================================= -->
+<!-- COM TREBALLEM -->
+<!-- ========================================================= -->
 
-<section id="mcr" style="background:var(--soft);">
+<section id="metodologia">
 
 <div class="container">
 
-<div class="center fade">
+<div style="max-width:900px;margin:auto;text-align:center;">
 
 <div class="overline">
 
-Intervenció física
+Com treballem
 
 </div>
 
-<h2 class="section-title">
+<h2>
 
-Mètode de Contenció Respectuosa
+El desenvolupament professional es construeix des de la pràctica.
 
 </h2>
 
-<p class="section-intro" style="margin:auto;">
+<p class="lead" style="max-width:760px;margin:36px auto 0;">
 
-El Mètode de Contenció Respectuosa forma part del SIIPP com una eina d'intervenció integrada dins del sistema. La seva aplicació s'alinea amb els principis de necessitat, proporcionalitat i últim recurs, preservant la seguretat, la dignitat i la qualitat assistencial.
+Cada organització té una realitat pròpia. El SIIPP s'adapta al context, acompanya els equips i facilita la integració dels aprenentatges en la pràctica quotidiana.
 
 </p>
 
 </div>
 
-<div style="margin-top:90px;" class="grid grid-3">
+<div style="margin-top:120px;display:grid;grid-template-columns:repeat(3,1fr);gap:42px;">
 
-<div class="card fade">
+<div class="card" style="padding:60px;position:relative;overflow:hidden;">
 
-<div class="icon-box">
+<div style="position:absolute;left:0;top:0;width:100%;height:6px;background:var(--green);"></div>
+
+<div style="font-size:4rem;font-weight:900;color:#D8E8E1;line-height:1;">
 
 01
 
 </div>
 
-<h3 class="small-title">
+<h3 class="small-title" style="margin-top:26px;">
 
-Necessitat
+Consultoria
 
 </h3>
 
 <p>
 
-Cada intervenció respon a una necessitat real derivada de la lectura contínua de la situació.
+Anàlisi del context, identificació de necessitats i definició conjunta dels objectius de desenvolupament de l'organització.
 
 </p>
 
 </div>
 
-<div class="card fade">
+<div class="card" style="padding:60px;position:relative;overflow:hidden;">
 
-<div class="icon-box">
+<div style="position:absolute;left:0;top:0;width:100%;height:6px;background:var(--green);"></div>
+
+<div style="font-size:4rem;font-weight:900;color:#D8E8E1;line-height:1;">
 
 02
 
 </div>
 
-<h3 class="small-title">
+<h3 class="small-title" style="margin-top:26px;">
 
-Proporcionalitat
+Formació
 
 </h3>
 
 <p>
 
-La intensitat de la resposta s'ajusta permanentment a l'evolució de la situació i a les necessitats de la persona.
+Entrenament orientat a desenvolupar les capacitats que sostenen la percepció, la presa de decisions i la intervenció sota pressió.
 
 </p>
 
 </div>
 
-<div class="card fade">
+<div class="card" style="padding:60px;position:relative;overflow:hidden;">
 
-<div class="icon-box">
+<div style="position:absolute;left:0;top:0;width:100%;height:6px;background:var(--green);"></div>
+
+<div style="font-size:4rem;font-weight:900;color:#D8E8E1;line-height:1;">
 
 03
 
 </div>
 
-<h3 class="small-title">
+<h3 class="small-title" style="margin-top:26px;">
 
-Últim recurs
+Acompanyament
 
 </h3>
 
 <p>
 
-La intervenció física forma part del conjunt d'opcions disponibles dins del sistema i s'integra en una estratègia orientada a preservar la qualitat de la intervenció.
+Transferència al lloc de treball perquè el desenvolupament professional es consolidi en les situacions reals que afronta l'equip.
 
 </p>
 
@@ -1571,129 +933,89 @@ La intervenció física forma part del conjunt d'opcions disponibles dins del si
 
 
 
-<!-- ===================================================== -->
-<!-- FORMACIÓ -->
-<!-- ===================================================== -->
+<!-- ========================================================= -->
+<!-- MCR -->
+<!-- ========================================================= -->
 
-<section>
+<section style="background:linear-gradient(180deg,#F8FBFC,#FFFFFF);">
 
 <div class="container">
 
-<div class="grid grid-2" style="align-items:center;gap:90px;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;">
 
-<div class="fade">
+<div>
+
+<div class="photo" style="height:560px;">
+
+<!-- FOTOGRAFIA -->
+
+</div>
+
+</div>
+
+<div>
 
 <div class="overline">
 
-Entrenament
+Mètode de Contenció Respectuosa
 
 </div>
 
-<h2 class="section-title">
+<h2>
 
-La capacitat s'entrena abans que la tècnica.
+Una metodologia integrada dins del SIIPP.
 
 </h2>
 
-<p class="section-intro">
+<p class="lead" style="margin-top:36px;">
 
-L'aprenentatge es construeix a partir de l'experiència directa perquè les capacitats desenvolupades es transfereixin a la intervenció real.
+El Mètode de Contenció Respectuosa forma part del Sistema Integral d'Intervenció Psicofísica i proporciona un marc operatiu perquè les intervencions físiques s'alineïn amb els principis de qualitat assistencial del centre.
 
 </p>
 
-<div style="margin-top:50px;display:flex;flex-direction:column;gap:30px;">
+<div style="margin-top:54px;display:flex;flex-direction:column;gap:28px;">
 
-<div style="display:flex;gap:20px;align-items:flex-start;">
+<div style="display:flex;gap:18px;align-items:flex-start;">
 
-<div class="icon-box">
-
-1
-
-</div>
+<div style="width:14px;height:14px;border-radius:50%;background:var(--green);margin-top:8px;"></div>
 
 <div>
 
-<h3 class="small-title">
+<strong>Necessitat</strong><br>
 
-Percebre
-
-</h3>
-
-<p>
-
-Desenvolupar sensibilitat sobre el propi estat i sobre la situació.
-
-</p>
+Cada intervenció respon a una necessitat real de la situació.
 
 </div>
 
 </div>
 
-<div style="display:flex;gap:20px;align-items:flex-start;">
+<div style="display:flex;gap:18px;align-items:flex-start;">
 
-<div class="icon-box">
-
-2
-
-</div>
+<div style="width:14px;height:14px;border-radius:50%;background:var(--green);margin-top:8px;"></div>
 
 <div>
 
-<h3 class="small-title">
+<strong>Proporcionalitat</strong><br>
 
-Reconèixer
-
-</h3>
-
-<p>
-
-Identificar patrons útils per orientar la lectura i la presa de decisions.
-
-</p>
+L'actuació manté coherència amb l'evolució de la situació i amb els objectius assistencials.
 
 </div>
 
 </div>
 
-<div style="display:flex;gap:20px;align-items:flex-start;">
+<div style="display:flex;gap:18px;align-items:flex-start;">
 
-<div class="icon-box">
-
-3
-
-</div>
+<div style="width:14px;height:14px;border-radius:50%;background:var(--green);margin-top:8px;"></div>
 
 <div>
 
-<h3 class="small-title">
+<strong>Últim recurs</strong><br>
 
-Conceptualitzar
-
-</h3>
-
-<p>
-
-Integrar l'experiència dins d'una arquitectura operativa transferible.
-
-</p>
+La intervenció física s'integra dins d'una arquitectura més àmplia orientada a preservar la qualitat de la decisió i de la relació assistencial.
 
 </div>
 
 </div>
-
-</div>
-
-</div>
-
-<div class="fade">
-
-<div class="image-placeholder">
-
-<!--
-
-FOTOGRAFIA D'ENTRENAMENT
-
--->
 
 </div>
 
@@ -1705,15 +1027,15 @@ FOTOGRAFIA D'ENTRENAMENT
 
 </section>
 
-<!-- ===================================================== -->
+<!-- ========================================================= -->
 <!-- EXPERIÈNCIA -->
-<!-- ===================================================== -->
+<!-- ========================================================= -->
 
-<section>
+<section id="experiencia">
 
 <div class="container">
 
-<div class="center fade">
+<div style="max-width:860px;margin:auto;text-align:center;">
 
 <div class="overline">
 
@@ -1721,73 +1043,99 @@ Experiència
 
 </div>
 
-<h2 class="section-title">
+<h2>
 
-Desenvolupat al costat dels equips.
+Una proposta desenvolupada des de la pràctica.
 
 </h2>
 
-<p class="section-intro" style="margin:auto;">
+<p class="lead" style="max-width:760px;margin:36px auto 0;">
 
-El SIIPP s'ha desenvolupat i aplicat en serveis d'atenció directa, treballant conjuntament amb equips que intervenen diàriament en situacions d'alta intensitat.
-
-</p>
-
-</div>
-
-<div style="margin-top:90px;" class="grid grid-2">
-
-<div class="card fade" style="text-align:center;padding:70px 50px;">
-
-<div style="font-size:5rem;font-weight:800;color:var(--primary);line-height:1;">
-
-+400
-
-</div>
-
-<div style="margin-top:20px;font-size:1.35rem;font-weight:700;">
-
-Professionals formats
-
-</div>
-
-<p style="margin-top:20px;">
-
-Formacions desenvolupades en contextos reals d'intervenció.
+El SIIPP evoluciona a partir del treball directe amb professionals que intervenen cada dia en contextos d'alta complexitat. Cada implementació contribueix a ampliar el sistema i a consolidar una pràctica compartida.
 
 </p>
 
 </div>
 
-<div class="card fade">
+<div style="margin-top:110px;display:grid;grid-template-columns:1fr 1fr;gap:40px;">
 
-<h3 class="small-title">
+<div class="photo" style="height:420px;">
 
-Organitzacions
-
-</h3>
-
-<div style="display:flex;flex-direction:column;gap:22px;margin-top:35px;">
-
-<div style="padding-bottom:18px;border-bottom:1px solid var(--border);">
-
-Fundació Atendis
+<!-- FORMACIÓ -->
 
 </div>
 
-<div style="padding-bottom:18px;border-bottom:1px solid var(--border);">
+<div class="photo" style="height:420px;">
 
-Fundació Sant Tomàs
-
-</div>
-
-<div>
-
-Xarxa Santa Tecla
+<!-- INTERVENCIÓ -->
 
 </div>
 
 </div>
+
+<div style="margin-top:90px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;">
+
+<div class="card" style="text-align:center;">
+
+<div style="font-size:3.2rem;font-weight:900;color:var(--navy);">
+
+15+
+
+</div>
+
+<p style="margin-top:14px;">
+
+Anys de desenvolupament.
+
+</p>
+
+</div>
+
+<div class="card" style="text-align:center;">
+
+<div style="font-size:3.2rem;font-weight:900;color:var(--navy);">
+
+400+
+
+</div>
+
+<p style="margin-top:14px;">
+
+Professionals formats.
+
+</p>
+
+</div>
+
+<div class="card" style="text-align:center;">
+
+<div style="font-size:3.2rem;font-weight:900;color:var(--navy);">
+
+100%
+
+</div>
+
+<p style="margin-top:14px;">
+
+Orientació a la pràctica.
+
+</p>
+
+</div>
+
+<div class="card" style="text-align:center;">
+
+<div style="font-size:3.2rem;font-weight:900;color:var(--navy);">
+
+∞
+
+</div>
+
+<p style="margin-top:14px;">
+
+Desenvolupament continu.
+
+</p>
 
 </div>
 
@@ -1799,59 +1147,83 @@ Xarxa Santa Tecla
 
 
 
-<!-- ===================================================== -->
-<!-- CTA -->
-<!-- ===================================================== -->
+<!-- ========================================================= -->
+<!-- CTA FINAL -->
+<!-- ========================================================= -->
 
-<section id="contacte">
+<section id="contacte" style="padding-bottom:180px;">
 
 <div class="container">
 
-<div class="card fade"
+<div style="position:relative;
+overflow:hidden;
+padding:110px;
+border-radius:36px;
+background:linear-gradient(135deg,#0D3448,#1A566E);
+color:white;">
 
-style="padding:80px;
-background:linear-gradient(135deg,#0D3B4C,#145267);
-color:white;
-border:none;">
-
-<div class="grid grid-2" style="align-items:center;gap:60px;">
-
-<div>
-
-<div class="overline" style="color:#8FE3C3;">
-
-Reunió de treball
+<div style="position:absolute;
+right:-120px;
+top:-120px;
+width:420px;
+height:420px;
+border-radius:50%;
+background:rgba(255,255,255,.04);">
 
 </div>
 
-<h2 style="font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.1;">
+<div style="position:absolute;
+left:-80px;
+bottom:-80px;
+width:260px;
+height:260px;
+border-radius:50%;
+background:rgba(84,176,141,.10);">
 
-Parlem del vostre centre.
+</div>
+
+<div style="position:relative;
+z-index:2;
+max-width:760px;">
+
+<div class="overline" style="color:#9BE3C5;">
+
+Parlem
+
+</div>
+
+<h2 style="color:white;">
+
+Cada organització té una realitat pròpia.
+
+Cada desenvolupament també.
 
 </h2>
 
-<p style="margin-top:30px;font-size:1.15rem;opacity:.9;max-width:620px;">
+<p style="margin-top:34px;
+font-size:1.18rem;
+opacity:.92;
+max-width:680px;">
 
-Cada organització presenta necessitats, equips i contextos diferents.
-
-Una reunió permet compartir el sistema, conèixer la realitat del vostre servei i valorar possibles vies de col·laboració.
+Concertem una reunió i analitzarem conjuntament els objectius del vostre centre, les necessitats de l'equip i les possibilitats d'implementació del SIIPP.
 
 </p>
 
-</div>
+<div style="margin-top:50px;display:flex;gap:20px;flex-wrap:wrap;">
 
-<div style="display:flex;justify-content:center;align-items:center;">
-
-<a href="mailto:ojki74@gmail.com"
-
-class="btn"
-
-style="background:white;
-color:#0D3B4C;
-padding:22px 42px;
-font-size:1.05rem;">
+<a href="mailto:contacte@siipp.cat"
+class="button"
+style="background:white;color:var(--navy);">
 
 Concertar una reunió
+
+</a>
+
+<a href="#"
+class="button"
+style="border:1px solid rgba(255,255,255,.25);color:white;">
+
+Descarregar dossier
 
 </a>
 
@@ -1867,97 +1239,24 @@ Concertar una reunió
 
 
 
-<!-- ===================================================== -->
-<!-- FOOTER -->
-<!-- ===================================================== -->
+<footer style="padding:40px 0;border-top:1px solid var(--line);">
 
-<footer style="background:#081923;color:white;padding:70px 0;">
+<div class="container"
+style="display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;">
 
-<div class="container">
-
-<div class="grid grid-3" style="align-items:start;gap:50px;">
-
-<div>
-
-<div style="font-size:1.5rem;font-weight:800;letter-spacing:.05em;">
+<div style="font-weight:800;color:var(--navy);">
 
 SIIPP
 
 </div>
 
-<p style="margin-top:20px;color:#C7D3D9;">
+<div style="color:var(--text-soft);">
 
-Sistema Integral d'Intervenció Psicofísica
-
-</p>
-
-</div>
-
-<div>
-
-<div style="font-weight:700;margin-bottom:18px;">
-
-Contacte
-
-</div>
-
-<p>
-
-Óscar Fernández Sanz
-
-</p>
-
-<p>
-
-ojki74@gmail.com
-
-</p>
-
-<p>
-
-654 583 643
-
-</p>
-
-</div>
-
-<div>
-
-<div style="font-weight:700;margin-bottom:18px;">
-
-Àmbits
-
-</div>
-
-<p>
-
-Consultoria
-
-</p>
-
-<p>
-
-Formació
-
-</p>
-
-<p>
-
-Acompanyament en camp
-
-</p>
-
-</div>
-
-</div>
-
-<div style="margin-top:70px;
-padding-top:30px;
-border-top:1px solid rgba(255,255,255,.1);
-font-size:.9rem;
-color:#AAB7BE;">
-
-© SIIPP · Sistema Integral d'Intervenció Psicofísica
+© 2026 · Sistema Integral d'Intervenció Psicofísica
 
 </div>
 
@@ -1967,45 +1266,21 @@ color:#AAB7BE;">
 
 
 
-<!-- ===================================================== -->
-<!-- JAVASCRIPT -->
-<!-- ===================================================== -->
-
 <script>
 
 const header=document.getElementById("header");
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>20){
+if(window.scrollY>40){
 
-header.classList.add("active");
+header.classList.add("scrolled");
 
 }else{
 
-header.classList.remove("active");
+header.classList.remove("scrolled");
 
 }
-
-});
-
-const observer=new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("visible");
-
-}
-
-});
-
-},{threshold:.15});
-
-document.querySelectorAll(".fade").forEach(el=>{
-
-observer.observe(el);
 
 });
 
