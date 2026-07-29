@@ -1,237 +1,278 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIIPP — Contenció Psicològica i Física Respectuosa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        stone: {
-                            50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1',
-                            400: '#a8a29e', 500: '#78716c', 600: '#57534e', 700: '#44403c',
-                            800: '#292524', 900: '#1c1917',
-                        },
-                        slate: { 800: '#1e293b' }
-                    },
-                    fontFamily: {
-                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        body { background-color: #fafaf9; color: #1c1917; -webkit-font-smoothing: antialiased; }
-        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .line { height: 1px; background-color: #e7e5e4; width: 100%; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SIIPP | Sistema Integral d'Intervenció Psicofísica</title>
+
+<meta name="description" content="Sistema Integral d'Intervenció Psicofísica PREDIAC. Formació pràctica per millorar la qualitat de decisió sota pressió.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
-<body class="font-sans antialiased">
 
-    <nav class="fixed top-0 left-0 right-0 bg-stone-50/90 backdrop-blur-sm z-50 border-b border-stone-200">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-lg tracking-tight font-medium text-stone-900">SIIPP</a>
-            <div class="hidden md:flex items-center gap-10 text-sm text-stone-600">
-                <a href="#model" class="hover:text-stone-900 transition-colors">Model</a>
-                <a href="#sistema" class="hover:text-stone-900 transition-colors">Sistema</a>
-                <a href="#contacte" class="hover:text-stone-900 transition-colors">Contacte</a>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero -->
-    <section class="min-h-screen flex items-center px-6 pt-16">
-        <div class="max-w-5xl mx-auto reveal">
-            <p class="text-stone-500 text-lg mb-8">Sistema Integral d'Intervenció Psicofísica</p>
-            <h1 class="text-5xl md:text-7xl leading-tight tracking-tight text-stone-900 max-w-4xl">
-                La contenció és intervenció quan emergeix d'un sistema regulat.
-            </h1>
-            <p class="mt-12 text-xl text-stone-600 max-w-2xl leading-relaxed">
-                SIIPP desenvolupa la regulació somàtica que fa possible la contenció psicològica i física respectuosa.
-            </p>
-            <div class="mt-12">
-                <a href="#contacte" class="inline-block bg-slate-800 text-white text-sm px-8 py-3.5 hover:bg-stone-800 transition-colors">
-                    Sol·licita informació
-                </a>
-            </div>
-        </div>
-    </section>
+<header>
 
-    <div class="line max-w-6xl mx-auto"></div>
+<div class="container">
 
-    <!-- Model -->
-    <section id="model" class="py-32 md:py-48 px-6">
-        <div class="max-w-4xl mx-auto reveal text-center">
-            <p class="text-3xl md:text-5xl text-stone-900 leading-snug tracking-tight">
-                La regulació configura l'estat.<br>
-                L'estat modula la percepció.<br>
-                La percepció orienta la decisió.<br>
-                La decisió organitza la contenció.
-            </p>
-        </div>
-    </section>
+<nav>
 
-    <div class="line max-w-6xl mx-auto"></div>
+<div class="logo">
+SIIPP
+</div>
 
-    <!-- Espiral -->
-    <section id="sistema" class="py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto reveal flex flex-col items-center">
-            <svg viewBox="0 0 600 350" class="w-full h-auto max-w-2xl" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 520 280 C 520 50, 80 50, 80 175 C 80 300, 350 300, 350 175" 
-                      fill="none" stroke="#d6d3d1" stroke-width="1.5" stroke-linecap="round"/>
-                <polygon points="350,175 340,185 360,185" fill="#78716c"/>
-                
-                <path d="M 350 195 Q 450 320 520 300" fill="none" stroke="#a8a29e" stroke-width="1.5" stroke-dasharray="4 3"/>
-                <polygon points="520,300 510,295 510,305" fill="#a8a29e"/>
-                
-                <circle cx="520" cy="280" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="520" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Cos</text>
-                
-                <circle cx="300" cy="50" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="300" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Regulació</text>
-                
-                <circle cx="80" cy="175" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="80" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Percepció</text>
-                
-                <circle cx="300" cy="280" r="28" fill="#fafaf9" stroke="#57534e" stroke-width="1"/>
-                <text x="300" y="285" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#1c1917">Contenció</text>
-                
-                <rect x="300" y="155" width="100" height="36" rx="2" fill="#1e293b"/>
-                <text x="350" y="178" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#fff" font-weight="500">Decisió</text>
-            </svg>
-            <p class="mt-16 text-center text-lg text-stone-600 max-w-xl">
-                Cada contenció actualitza el cos. La relectura incorpora nova informació a la percepció i reinicia el cicle.
-            </p>
-        </div>
-    </section>
+<a class="cta" href="#contacte">
+Concertar una reunió
+</a>
 
-    <div class="line max-w-6xl mx-auto"></div>
+</nav>
 
-    <!-- Ventana d'Agència -->
-    <section class="py-32 md:py-48 px-6 bg-stone-100">
-        <div class="max-w-3xl mx-auto reveal">
-            <p class="text-2xl md:text-4xl text-stone-900 leading-snug tracking-tight">
-                En situacions de contenció, la Ventana d'Agència es redueix per a tots els agents implicats. El SIIPP entrena la regulació que manté oberta la capacitat de decisió pròpia i genera condicions de corregulació per a l'altre.
-            </p>
-        </div>
-    </section>
+</div>
 
-    <div class="line max-w-6xl mx-auto"></div>
+</header>
 
-    <!-- Corregulació -->
-    <section class="py-24 md:py-32 px-6">
-        <div class="max-w-3xl mx-auto reveal">
-            <p class="text-2xl md:text-3xl text-stone-900 leading-snug tracking-tight">
-                La regulació somàtica de l'intervinient és el primer instrument de contenció psicològica.
-            </p>
-        </div>
-    </section>
 
-    <div class="line max-w-6xl mx-auto"></div>
+<section class="hero">
 
-    <!-- Aplicació -->
-    <section class="py-24 md:py-32 px-6 bg-stone-100">
-        <div class="max-w-6xl mx-auto reveal grid md:grid-cols-2 gap-16">
-            <div>
-                <p class="text-sm text-stone-500 uppercase tracking-wide mb-4">Escala individual</p>
-                <p class="text-2xl text-stone-900 leading-snug mb-6">Personal</p>
-                <p class="text-stone-600 leading-relaxed">
-                    Contenció psicològica i Mètode de Contenció Respectuosa (Contenció Física), desenvolupats a partir de la tradició del Kung Fu Ving Tsun i aplicats des de la regulació somàtica i la qualitat de decisió sota pressió.
-                </p>
-            </div>
-            <div>
-                <p class="text-sm text-stone-500 uppercase tracking-wide mb-4">Escala institucional</p>
-                <p class="text-2xl text-stone-900 leading-snug mb-6">Organitzacions</p>
-                <p class="text-stone-600 leading-relaxed">
-                    Implantació del sistema de contenció respectuosa en equips: formació, consultoria, desenvolupament de protocols i formació de referents interns.
-                </p>
-            </div>
-        </div>
-    </section>
+<div class="container hero-grid">
 
-    <div class="line max-w-6xl mx-auto"></div>
+<div class="hero-text">
 
-    <!-- Dinàmica transversal -->
-    <section class="py-24 md:py-32 px-6">
-        <div class="max-w-3xl mx-auto reveal">
-            <p class="text-2xl md:text-3xl text-stone-900 leading-snug tracking-tight">
-                Decidir sostener i sostener lo decidit organitzen l'absorció i la projecció de tensió dins de la contenció.
-            </p>
-        </div>
-    </section>
+<span class="eyebrow">
+Sistema Integral d'Intervenció Psicofísica
+</span>
 
-    <div class="line max-w-6xl mx-auto"></div>
+<h1>
+La qualitat de decisió sota pressió.
+</h1>
 
-    <!-- Trajectòria -->
-    <section class="py-24 md:py-32 px-6 bg-stone-100">
-        <div class="max-w-3xl mx-auto reveal">
-            <p class="text-xl md:text-2xl text-stone-600 leading-relaxed">
-                Desenvolupat a partir de vint anys d'intervenció directa, formació d'equips, implantació de sistemes i desenvolupament del Mètode de Contenció Respectuosa. Operatiu en diversitat funcional, salut mental, educació, seguretat, emergències i serveis socials.
-            </p>
-        </div>
-    </section>
+<p>
 
-    <div class="line max-w-6xl mx-auto"></div>
+Formació experiencial per a professionals d'atenció directa que intervenen en situacions d'elevada intensitat.
 
-    <!-- Tancament -->
-    <section class="py-32 md:py-48 px-6">
-        <div class="max-w-5xl mx-auto reveal text-center">
-            <p class="text-3xl md:text-6xl text-stone-900 leading-tight tracking-tight">
-                La regulació és el primer acte de qualsevol contenció respectuosa.
-            </p>
-        </div>
-    </section>
+El SIIPP desenvolupa les capacitats necessàries per conservar regulació, llegir millor la situació i intervenir amb precisió quan la pressió augmenta.
 
-    <div class="line max-w-6xl mx-auto"></div>
+</p>
 
-    <!-- Contacte -->
-    <section id="contacte" class="py-24 md:py-32 px-6">
-        <div class="max-w-3xl mx-auto reveal">
-            <p class="text-xl text-stone-600 leading-relaxed mb-16">
-                Explora com el sistema de contenció respectuosa pot operar en el teu context.
-            </p>
-            <form class="space-y-10" onsubmit="event.preventDefault();">
-                <div>
-                    <label class="block text-sm text-stone-500 mb-2">Nom</label>
-                    <input type="text" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors">
-                </div>
-                <div>
-                    <label class="block text-sm text-stone-500 mb-2">Correu electrònic</label>
-                    <input type="email" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors">
-                </div>
-                <div>
-                    <label class="block text-sm text-stone-500 mb-2">Missatge</label>
-                    <textarea rows="3" class="w-full bg-transparent border-b border-stone-300 py-2 text-stone-900 focus:outline-none focus:border-stone-600 transition-colors resize-none"></textarea>
-                </div>
-                <div class="pt-4">
-                    <button type="submit" class="bg-slate-800 text-white text-sm px-10 py-3.5 hover:bg-stone-800 transition-colors">
-                        Contactar
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
+<div class="hero-buttons">
 
-    <footer class="py-12 px-6 border-t border-stone-200">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-stone-500">
-            <span>SIIPP</span>
-            <span>2026</span>
-        </div>
-    </footer>
+<a href="#contacte" class="button">
+Concertar una reunió
+</a>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+<a href="#sistema" class="button-secondary">
+Descobrir el sistema
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<img src="img/cicle-siipp.png"
+alt="Qualitat de decisió sota pressió">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="problem">
+
+<div class="container narrow">
+
+<h2>
+Quan la pressió augmenta,
+la qualitat de decisió disminueix.
+</h2>
+
+<p>
+
+En situacions de crisi és habitual que disminueixi la qualitat de la lectura, augmenti la resposta reactiva i es deteriori la coordinació entre professionals.
+
+La qualitat de la intervenció depèn de l'estat des del qual el professional percep, decideix i actua.
+
+El SIIPP s'ha desenvolupat per entrenar aquesta capacitat.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<section id="sistema" class="system">
+
+<div class="container">
+
+<h2>
+El cos organitza el sistema.
+</h2>
+
+<p class="intro">
+
+La regulació del professional constitueix la porta d'entrada al SIIPP.
+
+Quan el professional conserva regulació disposa de millors condicions per ampliar la percepció, llegir la situació, decidir amb precisió i intervenir de manera proporcionada.
+
+</p>
+
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Regulació</h3>
+
+<p>
+
+Posició, respiració i ancoratge somàtic per conservar organització sota pressió.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Percepció</h3>
+
+<p>
+
+Ampliar la capacitat de detectar informació rellevant sense quedar absorbit per l'activació.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Lectura</h3>
+
+<p>
+
+Integrar context, persones i senyals abans de decidir.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Decisió</h3>
+
+<p>
+
+Seleccionar l'acció més ajustada a la necessitat real del moment.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Acció</h3>
+
+<p>
+
+Intervenir amb precisió, proporcionalitat i mínima intrusió.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Relectura</h3>
+
+<p>
+
+Avaluar contínuament els efectes de la intervenció per adaptar-la.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section class="mcr">
+
+<div class="container">
+
+<div class="mcr-box">
+
+<h2>
+Mètode de Contenció Respectuosa
+</h2>
+
+<p>
+
+Quan la contenció resulta necessària, el SIIPP integra el MCR com a procediment d'intervenció física.
+
+La contenció no és el centre del sistema.
+
+És un recurs excepcional que s'aplica dins d'una estratègia orientada a preservar la capacitat de decisió del professional i afavorir la reorganització de la situació.
+
+</p>
+
+<div class="principis">
+
+<div>
+
+<h3>Necessitat</h3>
+
+<p>Només quan la situació ho requereix.</p>
+
+</div>
+
+<div>
+
+<h3>Proporcionalitat</h3>
+
+<p>Amb la mínima intensitat imprescindible.</p>
+
+</div>
+
+<div>
+
+<h3>Últim recurs</h3>
+
+<p>Quan la resta d'intervencions no són suficients.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
