@@ -350,7 +350,7 @@ h1{font-size:clamp(3.2rem,6vw,5.2rem);line-height:.98;font-weight:900;letter-spa
         </p>
       </div>
       <div class="form-card">
-        <form id="dossierForm">
+      <form id="dossierForm" action="https://formspree.io/f/mvkpoldk" method="POST">
           <div class="field">
             <label for="nom">Nom i cognoms</label>
             <input type="text" id="nom" required>
@@ -390,16 +390,31 @@ window.addEventListener("scroll",()=>{
   if(window.scrollY>40){header.classList.add("scrolled");}else{header.classList.remove("scrolled");}
 });
 
-document.getElementById("dossierForm").addEventListener("submit",function(e){
+document.getElementById("dossierForm").addEventListener("submit", async function(e){
   e.preventDefault();
-  const nom=document.getElementById("nom").value;
-  const org=document.getElementById("organitzacio").value;
-  const carrec=document.getElementById("carrec").value;
-  const email=document.getElementById("email").value;
-  const body=`Nom: ${nom}%0DOrganitzaci%C3%B3: ${org}%0DC%C3%A0rrec: ${carrec}%0DCorreu: ${email}`;
-  window.open("./SIIPP-Dossier.pdf","_blank");
-  window.location.href=`mailto:ojki74@gmail.com?subject=Sol%C2%B7licitud%20de%20dossier%20SIIPP%20-%20${encodeURIComponent(org)}&body=${body}`;
-  document.getElementById("confirmMsg").style.display="block";
+  const form = e.target;
+  const btn = form.querySelector("button[type=submit]");
+  btn.disabled = true;
+  btn.textContent = "Enviant...";
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+    if (res.ok) {
+      window.open("./SIIPP-Dossier.pdf", "_blank");
+      document.getElementById("confirmMsg").style.display = "block";
+      form.reset();
+    } else {
+      alert("No s'ha pogut enviar. Torna-ho a provar o escriu a ojki74@gmail.com.");
+    }
+  } catch (err) {
+    alert("No s'ha pogut enviar. Torna-ho a provar o escriu a ojki74@gmail.com.");
+  }
+  btn.disabled = false;
+  btn.textContent = "Descarregar dossier";
+});
 });
 </script>
 
