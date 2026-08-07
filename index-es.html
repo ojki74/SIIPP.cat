@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIIPP · Formación en regulación psicofísica para equipos de atención directa</title>
+<meta name="description" content="Formación bonificable por FUNDAE que mejora la calidad de decisión y la seguridad de los equipos de atención directa bajo presión.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D3448;
+  --teal:#2E7F82;
+  --green:#54B08D;
+  --text:#1E293B;
+  --text-soft:#64748B;
+  --bg:#FFFFFF;
+  --bg-soft:#F7FAFC;
+  --line:#E7EEF3;
+  --radius:26px;
+  --shadow:0 25px 70px rgba(15,30,45,.06);
+  --container:1280px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:white;color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+.container{width:min(92%,var(--container));margin:auto;}
+section{padding:140px 0;position:relative;}
+h2{font-size:clamp(2rem,3.4vw,2.8rem);font-weight:800;letter-spacing:-.02em;color:var(--navy);line-height:1.15;}
+.small-title{font-size:1.15rem;font-weight:700;color:var(--navy);}
+p{color:var(--text-soft);}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:.35s;}
+header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.04);}
+nav{height:92px;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:1.5rem;font-weight:900;letter-spacing:.08em;color:var(--navy);}
+.menu{display:flex;align-items:center;gap:42px;}
+.menu a{font-weight:500;transition:.25s;}
+.menu a:hover{color:var(--green);}
+.button{display:inline-flex;align-items:center;justify-content:center;padding:18px 34px;border-radius:999px;font-weight:700;transition:.3s;border:none;cursor:pointer;font-family:inherit;font-size:1rem;}
+.primary{background:var(--navy);color:white;}
+.primary:hover{transform:translateY(-3px);background:#184C63;}
+.secondary{border:1px solid var(--line);background:white;}
+.secondary:hover{border-color:var(--green);color:var(--teal);}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;background:radial-gradient(circle at 100% 0%,rgba(84,176,141,.08),transparent 40%),radial-gradient(circle at 0% 100%,rgba(13,52,72,.05),transparent 40%),linear-gradient(#FFFFFF,#FBFCFD);overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:center;}
+.overline{display:inline-block;margin-bottom:24px;font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--green);}
+h1{font-size:clamp(3.2rem,6vw,5.2rem);line-height:.98;font-weight:900;letter-spacing:-.05em;color:var(--navy);}
+.lead{margin-top:36px;font-size:1.22rem;color:var(--text-soft);max-width:670px;}
+.hero-actions{margin-top:54px;display:flex;gap:18px;flex-wrap:wrap;}
+.hero-photo{position:relative;display:flex;justify-content:center;align-items:center;height:760px;}
+.hero-photo::before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:linear-gradient(135deg,rgba(84,176,141,.08),rgba(46,127,130,.03));}
+.photo{position:relative;width:520px;height:650px;border-radius:34px;border:2px dashed #C9D7DE;background:linear-gradient(135deg,#F8FBFC,#EEF5F7);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:var(--shadow);}
+.photo>img{position:absolute;inset:0;width:100%;height:100%;}
+.hero-photo .photo{width:700px;height:460px;}
+  #ciclePhoto::before{content:none;}
+.photo::before{content:"FOTOGRAFÍA";font-size:.82rem;font-weight:800;letter-spacing:.18em;color:#9BAEB8;}
+.hero-bottom{margin-top:90px;display:grid;grid-template-columns:repeat(4,1fr);gap:36px;}
+.metric{padding-top:28px;border-top:1px solid var(--line);}
+.metric strong{display:block;font-size:2.4rem;font-weight:900;color:var(--navy);}
+.metric span{display:block;margin-top:10px;font-size:.92rem;color:var(--text-soft);}
+.fundae-strip{background:var(--navy);color:white;padding:26px 0;}
+.fundae-strip .container{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;text-align:center;}
+.fundae-strip strong{color:#9BE3C5;font-weight:800;}
+.clients{background:var(--bg-soft);}
+.client-grid{margin-top:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.client-card{background:white;border-radius:var(--radius);padding:44px;box-shadow:var(--shadow);}
+.client-card .org{font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:14px;}
+.client-card .services{font-size:.95rem;color:var(--text-soft);}
+.form-section{background:linear-gradient(135deg,#0D3448,#1A566E);color:white;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;}
+.form-grid h2{color:white;}
+.form-grid .lead{color:rgba(255,255,255,.75);}
+.form-card{background:white;border-radius:var(--radius);padding:52px;box-shadow:0 30px 90px rgba(0,0,0,.25);}
+.field{margin-bottom:22px;}
+.field label{display:block;font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.field input{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-family:inherit;font-size:1rem;color:var(--text);}
+.field input:focus{outline:2px solid var(--green);border-color:transparent;}
+.form-card .button{width:100%;margin-top:8px;}
+.form-note{margin-top:18px;font-size:.85rem;color:var(--text-soft);}
+.confirm{display:none;margin-top:18px;padding:16px 18px;border-radius:14px;background:rgba(84,176,141,.12);color:#1E7A5B;font-size:.92rem;font-weight:600;}
+@media(max-width:1100px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero{text-align:center;}
+  .hero-actions{justify-content:center;}
+  .hero-bottom{grid-template-columns:repeat(2,1fr);}
+  .menu{display:none;}
+  .hero-photo{height:auto;margin-top:70px;}
+  .client-grid{grid-template-columns:1fr;}
+  .form-grid{grid-template-columns:1fr;gap:60px;}
+}
+@media(max-width:700px){
+  section{padding:80px 0;}
+  h1{font-size:2.4rem;}
+  h2{font-size:1.7rem;}
+  .lead{font-size:1.05rem;}
+  #posicionament > .container > div,
+  #mcr .container > div[style*="grid-template-columns"]{
+    grid-template-columns:1fr !important;
+    gap:36px !important;
+  }
+  #mcr .container > div[style*="grid-template-columns"] > div:first-child{
+    order:-1;
+  }
+  .hero-photo .photo{width:100%;height:340px;}
+  .hero-photo .photo img{width:100%;transform:none;object-position:center;}
+  #ciclePhoto{width:100% !important;height:320px !important;margin-left:0 !important;}
+  #mcr .photo{width:100% !important;height:340px !important;margin-left:0 !important;}
+  .photo{width:100%;height:340px;}
+  .hero-bottom{grid-template-columns:repeat(2,1fr);gap:20px;}
+  .metric strong{font-size:1.8rem;}
+  [style*="padding:110px"]{padding:50px 30px !important;}
+  [style*="padding:80px"]{padding:40px 24px !important;}
+  div[style*="repeat(4,1fr)"],
+  div[style*="repeat(3,1fr)"],
+  div[style*="repeat(5,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+      <div class="logo">SIIPP</div>
+      <div class="menu">
+        <a href="#confianca">Quién ya confía</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#dossier" class="button primary">Descargar dossier</a>
+        <a href="index.html" style="font-weight:700;font-size:.85rem;color:var(--text-soft);">CA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="overline">Formación para equipos de atención directa</div>
+        <h1>La regulación del profesional es el punto de partida de toda intervención.</h1>
+        <p class="lead">
+          El SIIPP forma a vuestros equipos para conservar calidad de percepción, decisión y acción cuando la presión aumenta. Formación bonificable por FUNDAE, ya aplicada en varias entidades del tercer sector.
+        </p>
+        <div class="hero-actions">
+          <a href="#dossier" class="button primary">Descargar dossier</a>
+          <a href="mailto:ojki74@gmail.com?subject=Reuni%C3%B3n%20SIIPP" class="button secondary">Concertar una reunión</a>
+        </div>
+        <div class="hero-bottom">
+          <div class="metric"><strong>1000+</strong><span>Profesionales formados</span></div>
+          <div class="metric"><strong>15+</strong><span>Años de desarrollo</span></div>
+          <div class="metric"><strong>3</strong><span>Organizaciones que ya lo aplican</span></div>
+          <div class="metric"><strong>FUNDAE</strong><span>Formación bonificable</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+  <div class="photo"><img src="hero_imagen.png" alt="Profesionales en posición de regulación" style="width:130%;height:100%;object-fit:cover;object-position:right center;border-radius:34px;transform:translateX(-15%);"></div>
+    </div>
+  </div>
+</section>
+
+<div class="fundae-strip">
+  <div class="container">
+    <span><strong>Formación bonificada por FUNDAE</strong> — el crédito de formación del sector puede cubrir el coste para vuestro centro.</span>
+  </div>
+</div>
+
+<section id="posicionament">
+  <div class="container">
+  <div style="display:grid;grid-template-columns:1.15fr 1.1fr;gap:70px;align-items:center;">
+      <div>
+    <div class="photo" id="ciclePhoto" style="height:760px;width:calc(100% + 90px);background:white;margin-left:-90px;"><img src="retro_imagen.png" alt="Ciclo de calidad de decisión bajo presión" style="width:100%;height:100%;object-fit:fill;padding:8px;"></div>
+      </div>
+      <div>
+        <div class="overline">Nuestro enfoque</div>
+        <h2>La calidad asistencial emerge de la regulación de los profesionales que intervienen.</h2>
+        <p style="margin-top:16px;font-size:.95rem;font-weight:600;color:var(--teal);letter-spacing:.02em;">
+  Un enfoque nacido de la psicología y de más de 20 años de práctica marcial aplicada a la regulación bajo presión.
+</p>
+        <p class="lead" style="margin-top:36px;">
+          El SIIPP sitúa la regulación psicofísica del profesional en el centro de la intervención. Cuando el profesional preserva su capacidad de percibir, decidir y actuar bajo presión, aumenta la calidad de la intervención y se facilita la corregulación con la persona atendida.
+        </p>
+
+        <div style="margin-top:60px;display:flex;flex-direction:column;gap:34px;">
+          <div style="display:flex;gap:24px;align-items:flex-start;">
+            <div style="width:58px;height:58px;border-radius:18px;background:rgba(84,176,141,.12);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--green);flex-shrink:0;">01</div>
+            <div><h3 class="small-title">Profesionales más disponibles.</h3>
+            <p>La regulación amplía la disponibilidad corporal y cognitiva para mantener calidad de lectura y capacidad de respuesta durante toda la intervención.</p></div>
+          </div>
+          <div style="display:flex;gap:24px;align-items:flex-start;">
+            <div style="width:58px;height:58px;border-radius:18px;background:rgba(84,176,141,.12);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--green);flex-shrink:0;">02</div>
+            <div><h3 class="small-title">Equipos más coherentes.</h3>
+            <p>Compartir un mismo marco de intervención facilita la coordinación, refuerza la confianza entre profesionales e incrementa la consistencia de las decisiones.</p></div>
+          </div>
+          <div style="display:flex;gap:24px;align-items:flex-start;">
+            <div style="width:58px;height:58px;border-radius:18px;background:rgba(84,176,141,.12);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--green);flex-shrink:0;">03</div>
+            <div><h3 class="small-title">Intervenciones de calidad.</h3>
+            <p>La regulación del profesional preserva la calidad de la intervención incluso en las situaciones de máxima exigencia.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-soft);">
+  <div class="container">
+    <div style="text-align:center;max-width:900px;margin:auto;">
+      <div class="overline">Impacto organizativo</div>
+      <h2>La regulación del profesional transforma el funcionamiento de la organización.</h2>
+      <p class="lead" style="max-width:760px;margin:36px auto 0;">
+        Cuando los profesionales preservan su capacidad de decisión, aumenta la calidad asistencial, mejora la coordinación de los equipos y se refuerza la seguridad de la intervención.
+      </p>
+    </div>
+    <div style="margin-top:110px;display:grid;grid-template-columns:repeat(5,1fr);gap:28px;">
+      <div class="card"><h3 class="small-title">Coordinación</h3><p>Un lenguaje común entre profesionales que reduce errores en las intervenciones en equipo.</p></div>
+      <div class="card"><h3 class="small-title">Menos bajas y lesiones</h3><p>Profesionales con más capacidad para sostener la intervención bajo presión, con menos accidentes laborales.</p></div>
+      <div class="card"><h3 class="small-title">Menos rotación</h3><p>Equipos que no se marchan por inseguridad ante situaciones de intervención.</p></div>
+      <div class="card"><h3 class="small-title">Menos riesgo legal</h3><p>Intervenciones proporcionadas y documentables, que reducen el riesgo de denuncias por mala praxis.</p></div>
+      <div class="card"><h3 class="small-title">Imagen institucional</h3><p>Un trato respetuoso con los usuarios que protege la reputación del centro.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="metodologia">
+  <div class="container">
+    <div style="max-width:900px;margin:auto;text-align:center;">
+      <div class="overline">Cómo trabajamos</div>
+      <h2>Cada intervención comienza en el estado del profesional.</h2>
+      <p class="lead" style="max-width:760px;margin:36px auto 0;">
+        Cada organización tiene una realidad propia. El SIIPP se adapta al contexto, acompaña a los equipos y facilita la integración de los aprendizajes en la práctica cotidiana.
+      </p>
+    </div>
+    <div style="margin-top:120px;display:grid;grid-template-columns:repeat(3,1fr);gap:42px;">
+      <div class="card" style="padding:60px;position:relative;overflow:hidden;">
+        <div style="position:absolute;left:0;top:0;width:100%;height:6px;background:var(--green);"></div>
+        <div style="font-size:4rem;font-weight:900;color:#D8E8E1;line-height:1;">01</div>
+        <h3 class="small-title" style="margin-top:26px;">Consultoría</h3>
+        <p>Análisis del contexto, identificación de necesidades y definición conjunta de los objetivos de desarrollo de la organización.</p>
+      </div>
+      <div class="card" style="padding:60px;position:relative;overflow:hidden;">
+        <div style="position:absolute;left:0;top:0;width:100%;height:6px;background:var(--green);"></div>
+        <div style="font-size:4rem;font-weight:900;color:#D8E8E1;line-height:1;">02</div>
+        <h3 class="small-title" style="margin-top:26px;">Formación</h3>
+        <p>Entrenamiento orientado a desarrollar las capacidades que sostienen la percepción, la toma de decisiones y la intervención bajo presión.</p>
+      </div>
+      <div class="card" style="padding:60px;position:relative;overflow:hidden;">
+        <div style="position:absolute;left:0;top:0;width:100%;height:6px;background:var(--green);"></div>
+        <div style="font-size:4rem;font-weight:900;color:#D8E8E1;line-height:1;">03</div>
+        <h3 class="small-title" style="margin-top:26px;">Acompañamiento</h3>
+        <p>Transferencia al puesto de trabajo para que el desarrollo profesional se consolide en las situaciones reales que afronta el equipo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mcr" style="background:var(--bg-soft);">
+  <div class="container">
+    <div style="max-width:920px;margin:auto;text-align:center;">
+      <div class="overline">Método de Contención Respetuosa</div>
+      <h2>La calidad de una intervención física comienza antes del contacto.</h2>
+      <p class="lead" style="max-width:760px;margin:36px auto 0;">
+        El Método de Contención Respetuosa integra la intervención física dentro del Sistema Integral de Intervención Psicofísica. La calidad técnica se acompaña de una calidad de decisión que preserva la coherencia asistencial durante todo el proceso.
+      </p>
+    </div>
+   <div style="margin-top:120px;display:grid;grid-template-columns:1.05fr .95fr;gap:100px;align-items:center;">
+  <div><div class="photo" style="height:760px;width:calc(100% + 185px);margin-left:-147px;"><img src="mcr_imagen.png" alt="Contención en equipo SIIPP" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:34px;"></div></div>
+  <div style="position:relative;padding-left:70px;">
+    <div style="position:absolute;left:22px;top:12px;bottom:12px;width:2px;background:linear-gradient(var(--green),rgba(84,176,141,.15));"></div>
+    <div style="position:relative;margin-bottom:70px;">
+      <div style="position:absolute;left:-59px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--green);border:6px solid white;box-shadow:0 0 0 2px rgba(84,176,141,.25);"></div>
+      <div class="overline">01</div>
+      <h3 class="small-title">Necesidad</h3>
+      <p>Cada intervención responde a una lectura continuada de la situación y a una necesidad asistencial identificada por el profesional.</p>
+    </div>
+    <div style="position:relative;margin-bottom:70px;">
+      <div style="position:absolute;left:-59px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--green);border:6px solid white;box-shadow:0 0 0 2px rgba(84,176,141,.25);"></div>
+      <div class="overline">02</div>
+      <h3 class="small-title">Proporcionalidad</h3>
+      <p>La intervención evoluciona con la situación. Intensidad, duración y recursos se ajustan continuamente para preservar la calidad asistencial.</p>
+    </div>
+    <div style="position:relative;margin-bottom:70px;">
+      <div style="position:absolute;left:-59px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--green);border:6px solid white;box-shadow:0 0 0 2px rgba(84,176,141,.25);"></div>
+      <div class="overline">03</div>
+      <h3 class="small-title">Último recurso</h3>
+      <p>La intervención física forma parte del sistema cuando constituye la respuesta que mejor preserva la seguridad y la calidad de la intervención.</p>
+    </div>
+    <div style="position:relative;">
+      <div style="position:absolute;left:-59px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--navy);border:6px solid white;box-shadow:0 0 0 2px rgba(13,52,72,.20);"></div>
+      <div class="overline">04</div>
+      <h3 class="small-title">Restauración</h3>
+      <p>La intervención concluye con la recuperación progresiva de la organización del profesional, del usuario y del entorno, favoreciendo la continuidad asistencial.</p>
+    </div>
+  </div>
+</div>
+    <div style="margin-top:120px;padding:80px;border-radius:34px;background:white;box-shadow:var(--shadow);text-align:center;">
+      <h3 style="font-size:2rem;font-weight:800;line-height:1.25;max-width:900px;margin:auto;color:var(--navy);">
+        La contención física forma parte de la intervención. La calidad de la decisión determina la calidad con la que esta intervención se desarrolla.
+      </h3>
+    </div>
+  </div>
+</section>
+
+<section id="confianca" class="clients">
+  <div class="container">
+    <div style="max-width:860px;margin:auto;text-align:center;">
+      <div class="overline">Quién ya confía</div>
+      <h2>Un sistema desarrollado y validado en contextos reales de intervención.</h2>
+      <p class="lead" style="max-width:760px;margin:36px auto 0;">
+       Más de 1000 profesionales han sido formados en organizaciones del tercer sector aplicando los principios que hoy conforman el SIIPP.
+     </p>
+    </div>
+    <div class="client-grid">
+      <div class="client-card">
+       <div style="height:140px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+  <img src="Atendis.png" alt="Fundació Atendis" style="max-width:100%;max-height:100%;object-fit:contain;">
+</div>
+        <div class="services">Aral · Bauma · Escola</div>
+      </div>
+      <div class="client-card">
+        <div style="height:140px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+  <img src="Sant_tomas.png" alt="Sant Tomàs" style="max-width:100%;max-height:100%;object-fit:contain;">
+</div>
+        <div class="services">Riudeperes · CEEPSIR Estel</div>
+      </div>
+      <div class="client-card">
+       <div style="height:140px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+  <img src="xarxa_santa_tecla.png" alt="Xarxa Santa Tecla" style="max-width:100%;max-height:100%;object-fit:contain;">
+</div>
+        <div class="services">Escola Estela · Centre Garbí</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="dossier" class="form-section">
+  <div class="container">
+    <div class="form-grid">
+      <div>
+        <div class="overline" style="color:#9BE3C5;">Dossier completo</div>
+        <h2>Todo el sistema, en un documento.</h2>
+        <p class="lead">
+          Dejadnos vuestros datos y os enviamos el dossier del SIIPP al instante: enfoque, contenidos de formación, aportaciones para el equipo y bonificación FUNDAE. Recibiréis también un correo nuestro para concretar los siguientes pasos.
+        </p>
+      </div>
+      <div class="form-card">
+      <form id="dossierForm" action="https://formspree.io/f/mvkpoldk" method="POST">
+          <div class="field">
+            <label for="nom">Nombre y apellidos</label>
+        <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="field">
+            <label for="organitzacio">Organización</label>
+           <input type="text" id="organitzacio" name="organitzacio" required>
+          </div>
+          <div class="field">
+            <label for="carrec">Cargo</label>
+         <input type="text" id="carrec" name="carrec">
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+         <input type="email" id="email" name="email" required>
+          </div>
+          <button type="submit" class="button primary">Descargar dossier</button>
+          <p class="form-note">Al descargar el dossier, se enviarán vuestros datos para que podamos contactaros.</p>
+          <div class="confirm" id="confirmMsg">Dossier abierto. En breve nos pondremos en contacto contigo.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:40px 0;border-top:1px solid var(--line);">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+    <div style="font-weight:800;color:var(--navy);">SIIPP</div>
+   <div style="color:var(--text-soft);">Óscar Fernández Sanz · Psicólogo · Director del SIIPP · ojki74@gmail.com</div>
+    <div style="color:var(--text-soft);">© 2026 · Sistema Integral de Intervención Psicofísica</div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById("header");
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>40){header.classList.add("scrolled");}else{header.classList.remove("scrolled");}
+});
+
+document.getElementById("dossierForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector("button[type=submit]");
+  btn.disabled = true;
+  btn.textContent = "Enviando...";
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+    if (res.ok) {
+      window.open("./SIIPP-Dossier.pdf", "_blank");
+      document.getElementById("confirmMsg").style.display = "block";
+      form.reset();
+    } else {
+      alert("No se ha podido enviar. Vuelve a intentarlo o escribe a ojki74@gmail.com.");
+    }
+  } catch (err) {
+    alert("No se ha podido enviar. Vuelve a intentarlo o escribe a ojki74@gmail.com.");
+  }
+  btn.disabled = false;
+  btn.textContent = "Descargar dossier";
+});
+</script>
+
+</body>
+</html>
