@@ -367,6 +367,11 @@ h1{font-size:clamp(3.2rem,6vw,5.2rem);line-height:.98;font-weight:900;letter-spa
             <label for="email">Correo electrónico</label>
          <input type="email" id="email" name="email" required>
           </div>
+        <div class="field" style="display:flex;align-items:flex-start;gap:10px;">
+  <input type="checkbox" id="rgpd" name="rgpd" required style="margin-top:4px;width:auto;">
+  <label for="rgpd" style="font-weight:400;font-size:.85rem;">He leído y acepto la <a href="privacidad.html" target="_blank" style="text-decoration:underline;">política de privacidad</a>.</label>
+</div>
+<button type="submit" class="button primary">Descargar dossier</button>
           <button type="submit" class="button primary">Descargar dossier</button>
           <p class="form-note">Al descargar el dossier, se enviarán vuestros datos para que podamos contactaros.</p>
           <div class="confirm" id="confirmMsg">Dossier abierto. En breve nos pondremos en contacto contigo.</div>
@@ -377,6 +382,9 @@ h1{font-size:clamp(3.2rem,6vw,5.2rem);line-height:.98;font-weight:900;letter-spa
 </section>
 
 <footer style="padding:40px 0;border-top:1px solid var(--line);">
+  <div class="container" style="text-align:center;padding-bottom:16px;font-size:.85rem;">
+    <a href="aviso-legal-es.html" style="color:var(--text-soft);">Aviso legal</a> · <a href="privacidad.html" style="color:var(--text-soft);">Política de privacidad</a>
+  </div>
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
     <div style="font-weight:800;color:var(--navy);">SIIPP</div>
    <div style="color:var(--text-soft);">Óscar Fernández Sanz · Psicólogo · Director del SIIPP · ojki74@gmail.com</div>
